@@ -1,0 +1,28 @@
+Gameplay
+-5 people - each have their own specialty
+1. Conference Room - Given objective
+	-Bulletin board -logistics- time/telephone?
+	-T.V Report results
+	-See other people reactions
+	-DAy over
+	-repeat
+Assets
+	-Human
+		-5 of them
+		-animations walk/sit
+	Room
+		- T.V
+		- Telephone
+		- Bulletin board
+		- some couches, chairs , and tables
+	T.V
+		- Representing info
+		- animation on the screen
+		- voice acting
+Endings
+	- Fail to start rebellion and die
+	- Succeeded rebellion can't stop them from bombing major city what not
+	- Betrayl - at the end choose the government over the people
+Story line
+	- Convereges to 2 or 3 main story lines
+	- depending on results of logistics differnet mini stories happen
