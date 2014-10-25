@@ -6,6 +6,7 @@ public class CameraMove : MonoBehaviour
 	public float moveSpeed = 10f;
 	
 	void Update(){
+
 		if(Input.GetKeyDown(KeyCode.E)){//begin or end interaction
 			if(CameraLook.isInteracting){
 				print("ending interaction");
@@ -15,6 +16,7 @@ public class CameraMove : MonoBehaviour
 				CameraLook.isInteracting = true;
 			}
 		}
+
 
 		if(!CameraLook.isInteracting){//only move if camera isn't locked
 			Vector3 right = transform.right;
