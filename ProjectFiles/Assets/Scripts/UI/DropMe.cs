@@ -36,6 +36,11 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 		Sprite dropSprite = GetDropSprite (data);
 		if (dropSprite != null)
 			containerImage.color = highlightColor;
+
+	}
+
+	public void resetImage(){
+		receivingImage.overrideSprite = containerImage.sprite;
 	}
 
 	public void OnPointerExit(PointerEventData data)
