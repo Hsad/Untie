@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BulletinBoard.cs" />
      <Compile Include="Assets\Scripts\Character Movement\CameraLook.cs" />
      <Compile Include="Assets\Scripts\Character Movement\CameraMove.cs" />
      <Compile Include="Assets\Scripts\Dossier.cs" />

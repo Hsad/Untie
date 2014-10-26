@@ -47,16 +47,23 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 	private void SetDraggedPosition(PointerEventData data)
 	{
-		if (dragOnSurfaces && data.pointerEnter != null && data.pointerEnter.transform as RectTransform != null)
+		if (dragOnSurfaces && data.pointerEnter != null && data.pointerEnter.transform as RectTransform != null){
+
 			m_DraggingPlane = data.pointerEnter.transform as RectTransform;
+		}
 		
 		var rt = m_DraggingIcon.GetComponent<RectTransform>();
 		Vector3 globalMousePos;
 		if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlane, data.position, data.pressEventCamera, out globalMousePos))
 		{
 			rt.position = globalMousePos;
-			rt.rotation = m_DraggingPlane.rotation;
+			//rt.rotation =  m_DraggingPlane.rotation;
+
+			Quaternion difference = (Quaternion.Inverse(transform.rotation) * m_DraggingPlane.rotation);
+			rt.localRotation = difference;//Quaternion.Inverse(difference);
+			//print("Difference : " + difference.eulerAngles);
 		}
+		//print(rt.rotation);
 	}
 
 	public void OnEndDrag(PointerEventData eventData)
