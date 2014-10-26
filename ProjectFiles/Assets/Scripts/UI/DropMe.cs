@@ -34,6 +34,7 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 		if (dropSprite != null){
 			receivingImage.overrideSprite = dropSprite;
 			d = data.pointerDrag.GetComponent<DragMe>().d;
+			bb[gameObject] = d;
 		}
 	}
 
