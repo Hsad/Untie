@@ -7,7 +7,7 @@ public class BulletinBoard : MonoBehaviour {
 
 	//This class keeps track of the current state of the bulletin board
 
-	public List<Image> nodes = new List<Image>();//list of every event slot
+	public List<GameObject> nodes = new List<GameObject>();//list of every event slot
 
 	// Use this for initialization
 	void Start () {

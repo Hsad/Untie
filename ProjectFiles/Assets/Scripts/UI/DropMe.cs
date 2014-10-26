@@ -9,12 +9,19 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 	public Image receivingImage;
 	private Color normalColor;
 	public Color highlightColor = Color.yellow;
+	private BulletinBoard bb;
+	public Dossier d;//reference to the dossier info.
 	
 	public void OnEnable ()
 	{
 		if (containerImage != null)
 			normalColor = containerImage.color;
 	}
+
+	public void Awake(){
+		bb = transform.parent.GetComponent<BulletinBoard>();
+	}
+
 	
 	public void OnDrop(PointerEventData data)
 	{
@@ -24,8 +31,10 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 			return;
 		
 		Sprite dropSprite = GetDropSprite (data);
-		if (dropSprite != null)
+		if (dropSprite != null){
 			receivingImage.overrideSprite = dropSprite;
+			d = data.pointerDrag.GetComponent<DragMe>().d;
+		}
 	}
 
 	public void OnPointerEnter(PointerEventData data)
@@ -41,6 +50,7 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 
 	public void resetImage(){
 		receivingImage.overrideSprite = containerImage.sprite;
+		d = null;
 	}
 
 	public void OnPointerExit(PointerEventData data)

@@ -6,13 +6,23 @@ using UnityEngine.UI;
 public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
 	public bool dragOnSurfaces = true;
+	public Dossier d;//reference to the dossier info.
+	private Canvas canvas;
+
 	
 	private GameObject m_DraggingIcon;
 	private RectTransform m_DraggingPlane;
 
+	void Awake(){
+		canvas = FindInParents<Canvas>(gameObject);
+		if(canvas != null){
+			d = canvas.GetComponent<Dossier>();
+		}
+	}
+
 	public void OnBeginDrag(PointerEventData eventData)
 	{
-		var canvas = FindInParents<Canvas>(gameObject);
+
 		if (canvas == null)
 			return;
 
