@@ -77,13 +77,9 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlane, data.position, data.pressEventCamera, out globalMousePos))
 		{
 			rt.position = globalMousePos;
-			//rt.rotation =  m_DraggingPlane.rotation; // WHY YOU NO WORK
+			rt.rotation =  m_DraggingPlane.rotation;
 
-			//Quaternion difference = (Quaternion.Inverse(transform.rotation) * m_DraggingPlane.rotation);
-			//rt.localRotation = difference;//Quaternion.Inverse(difference);
-			//print("Difference : " + difference.eulerAngles);
 		}
-		//print(rt.rotation);
 	}
 
 	public void OnEndDrag(PointerEventData eventData)
