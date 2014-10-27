@@ -60,6 +60,16 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		if (dragOnSurfaces && data.pointerEnter != null && data.pointerEnter.transform as RectTransform != null){
 
 			m_DraggingPlane = data.pointerEnter.transform as RectTransform;
+
+
+			Canvas newcanvas = FindInParents<Canvas>(data.pointerEnter);
+			if(newcanvas != canvas){
+
+				m_DraggingIcon.transform.SetParent (newcanvas.transform, false);
+				m_DraggingIcon.transform.SetAsLastSibling();
+				m_DraggingIcon.transform.localScale = canvas.transform.localScale;
+				canvas = newcanvas;
+			}
 		}
 		
 		var rt = m_DraggingIcon.GetComponent<RectTransform>();

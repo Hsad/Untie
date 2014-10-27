@@ -3,8 +3,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
-{
+public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler{
+	//bulletin board drop slot
+
 	public Image containerImage;
 	public Image receivingImage;
 	private Color normalColor;
@@ -34,7 +35,7 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 		if (dropSprite != null){
 			receivingImage.overrideSprite = dropSprite;
 			d = data.pointerDrag.GetComponent<DragMe>().d;
-			bb[gameObject] = d;
+			bb.nodes[gameObject] = d;
 		}
 	}
 
@@ -52,6 +53,7 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 	public void resetImage(){
 		receivingImage.overrideSprite = containerImage.sprite;
 		d = null;
+		bb.nodes[gameObject] = null;
 	}
 
 	public void OnPointerExit(PointerEventData data)

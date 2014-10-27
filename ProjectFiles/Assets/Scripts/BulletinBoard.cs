@@ -18,4 +18,14 @@ public class BulletinBoard : MonoBehaviour {
 	void Update () {
 	
 	}
+
+
+	//post-it notes next to links between nodes
+	//specify time and action --> actions are limited, player makes choice
+
+
+	//your core people are in fixed board positions
+	//make connections to specify their next move
+	//distance they must travel relative to actual time of objective determines failure chance
+
 }

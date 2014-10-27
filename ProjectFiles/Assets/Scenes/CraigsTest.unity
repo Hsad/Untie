@@ -898,7 +898,7 @@ RectTransform:
   m_GameObject: {fileID: 1250917577}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -9.99999975e-05}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 2, z: 1}
   m_Children:
   - {fileID: 1482511059}
   - {fileID: 2021659870}
@@ -921,7 +921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b607b24c7bf809348ba5ae8ed1aee049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodes: []
 --- !u!1 &1482511055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1231,7 @@ RectTransform:
   m_GameObject: {fileID: 1588981084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .200000003, y: .5, z: 1}
   m_Children:
   - {fileID: 1250917580}
   m_Father: {fileID: 189110075}
@@ -1240,7 +1239,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1, y: 1}
+  m_SizeDelta: {x: 5, y: 2}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1588981086
 MonoBehaviour:
