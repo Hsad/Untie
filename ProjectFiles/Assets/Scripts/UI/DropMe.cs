@@ -9,9 +9,12 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 	public Image containerImage;
 	public Image receivingImage;
 	private Color normalColor;
-	public Color highlightColor = Color.yellow;
+	Color highlightColor = Color.green;
+	Color lockColor = Color.red;
 	private BulletinBoard bb;
 	public Dossier d;//reference to the dossier info.
+
+	public bool locked = false;
 	
 	public void OnEnable ()
 	{
@@ -24,18 +27,19 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 	}
 
 	
-	public void OnDrop(PointerEventData data)
-	{
-		containerImage.color = normalColor;
-		
-		if (receivingImage == null)
-			return;
-		
-		Sprite dropSprite = GetDropSprite (data);
-		if (dropSprite != null){
-			receivingImage.overrideSprite = dropSprite;
-			d = data.pointerDrag.GetComponent<DragMe>().d;
-			bb.nodes[gameObject] = d;
+	public void OnDrop(PointerEventData data){
+		if(!locked){//if the data is not locked in place
+			containerImage.color = normalColor;
+			
+			if (receivingImage == null)
+				return;
+			
+			Sprite dropSprite = GetDropSprite (data);
+			if (dropSprite != null){
+				receivingImage.overrideSprite = dropSprite;
+				d = data.pointerDrag.GetComponent<DragMe>().d;
+				bb.nodes[gameObject] = d;
+			}
 		}
 	}
 
@@ -43,6 +47,11 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 	{
 		if (containerImage == null)
 			return;
+
+		if(locked){
+			containerImage.color = lockColor;
+			return;
+		}
 		
 		Sprite dropSprite = GetDropSprite (data);
 		if (dropSprite != null)

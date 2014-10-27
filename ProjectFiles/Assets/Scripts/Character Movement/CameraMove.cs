@@ -32,7 +32,7 @@ public class CameraMove : MonoBehaviour
 
 
 
-			if(Mathf.Abs(mouseX) >= 90){
+			if(Mathf.Abs(mouseX) >= 90 && Mathf.Abs(mouseX) <= 100){
 				Vector3 movement = (transform.right * mouseX / 500) * Time.deltaTime * moveSpeed;
 				transform.parent.position += movement;
 			}
