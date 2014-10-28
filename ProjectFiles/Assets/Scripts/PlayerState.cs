@@ -5,8 +5,13 @@ using System.Collections.Generic;
 public class PlayerState : Singleton<PlayerState> {
 	public int publicOpinion = 0;//public opinion level
 	public int violence = 0;//amount of violence inflicted on civilians attributed to your group
+
+	[SerializeField]
+	public Sprite ropeSprite;//have to put this here because reasons
 	
 	public Dictionary<string,int> materials;//table of each material and the quantity acquired
+
+	//money should also be a resource
 
 	public List<Dossier> intel;//keep track of all player intel
 

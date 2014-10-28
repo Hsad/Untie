@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 4cf12a5779f3cf94aa86f81b5458c111
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: improvedmap_0
+    21300002: improvedmap_1
+    21300004: improvedmap_2
+    21300006: improvedmap_3
+    21300008: improvedmap_4
+    21300010: improvedmap_5
+    21300012: improvedmap_6
+    21300014: improvedmap_7
+    21300016: improvedmap_8
+    21300018: improvedmap_9
+    21300020: improvedmap_10
+    21300022: improvedmap_11
+    21300024: improvedmap_12
+    21300026: improvedmap_13
+    21300028: improvedmap_14
+    21300030: improvedmap_15
+    21300032: improvedmap_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 1
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 5
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: improvedmap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6272
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_1
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 6272
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5488
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_3
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 5488
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4704
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_5
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 4704
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3920
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_7
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 3920
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3136
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_9
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 3136
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2352
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_11
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 2352
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1568
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_13
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1568
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 784
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_15
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 784
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: improvedmap_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 740
+        height: 784
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

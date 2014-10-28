@@ -2,7 +2,8 @@ fileFormatVersion: 2
 guid: 882343094024cd54fb6a94ffa63e292f
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ropeSprite: {fileID: 21300000, guid: 83d8ce452260f9941a623d05905b2f5d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
