@@ -20,6 +20,12 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		}
 	}
 
+	public GameObject icon {//get the current icon (read only)
+		get {
+			return m_DraggingIcon;
+		}    
+	}
+
 	public void OnBeginDrag(PointerEventData eventData)
 	{
 
@@ -36,7 +42,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		var image = m_DraggingIcon.AddComponent<Image>();
 		// The icon will be under the cursor.
 		// We want it to be ignored by the event system.
-		m_DraggingIcon.AddComponent<IgnoreRaycast>();
+		m_DraggingIcon.AddComponent<IgnoreRaycast>().d = d;
 
 		image.sprite = GetComponent<Image>().sprite;
 		image.SetNativeSize();
@@ -84,7 +90,8 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 	public void OnEndDrag(PointerEventData eventData)
 	{
 		if (m_DraggingIcon != null)
-			Destroy(m_DraggingIcon);
+			//Destroy(m_DraggingIcon);
+			m_DraggingIcon.GetComponent<IgnoreRaycast>().pin();
 	}
 
 	static public T FindInParents<T>(GameObject go) where T : Component
