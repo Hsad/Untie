@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\BulletinBoard.cs" />
      <Compile Include="Assets\Scripts\Character Movement\CameraLook.cs" />
      <Compile Include="Assets\Scripts\Character Movement\CameraMove.cs" />
+     <Compile Include="Assets\Scripts\District.cs" />
      <Compile Include="Assets\Scripts\Dossier.cs" />
      <Compile Include="Assets\Scripts\Phone.cs" />
      <Compile Include="Assets\Scripts\PlayerState.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Scripts\UI\DragMe.cs" />
      <Compile Include="Assets\Scripts\UI\DropMe.cs" />
      <Compile Include="Assets\Scripts\UI\IgnoreRaycast.cs" />
+     <Compile Include="Assets\Scripts\UI\RaycastMask.cs" />
      <None Include="Assets\Fonts\Secret-Typewriter\Cpr.Sparhelt font License.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

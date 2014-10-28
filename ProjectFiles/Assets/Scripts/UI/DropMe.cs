@@ -28,7 +28,7 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 
 	
 	public void OnDrop(PointerEventData data){
-		if(!locked){//if the data is not locked in place
+		if(!locked){//if the data is not locked in place, replace it
 			containerImage.color = normalColor;
 			
 			if (receivingImage == null)
@@ -37,8 +37,11 @@ public class DropMe : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointe
 			Sprite dropSprite = GetDropSprite (data);
 			if (dropSprite != null){
 				receivingImage.overrideSprite = dropSprite;
-				d = data.pointerDrag.GetComponent<DragMe>().d;
-				bb.nodes[gameObject] = d;
+				DragMe dm = data.pointerDrag.GetComponent<DragMe>();
+				if(dm != null){
+					d = dm.d;
+					bb.nodes[gameObject] = d;
+				}
 			}
 		}
 	}

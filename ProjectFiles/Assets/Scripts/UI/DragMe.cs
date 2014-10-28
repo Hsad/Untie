@@ -61,7 +61,6 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 			m_DraggingPlane = data.pointerEnter.transform as RectTransform;
 
-
 			Canvas newcanvas = FindInParents<Canvas>(data.pointerEnter);
 			if(newcanvas != canvas){
 

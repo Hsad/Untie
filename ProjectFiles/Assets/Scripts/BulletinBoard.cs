@@ -19,6 +19,12 @@ public class BulletinBoard : MonoBehaviour {
 	
 	}
 
+	//should have an image mask for each district
+	//each district can support multiple assets at a time
+	//assets can be moved in and out of each district
+
+
+
 
 	//post-it notes next to links between nodes
 	//specify time and action --> actions are limited, player makes choice
