@@ -8,7 +8,8 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	public Dossier d = null;//reference to dossier
 	private Image im;//create an image
 	public GameObject target;//the target (formed by connecting strings)
-	public GameObject timenote;
+	public GameObject timenote;//the note with the time and instructions
+	public GameObject arrow;//arrow to give strings direction
 
 	bool dragging = false;
 
@@ -107,6 +108,20 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			timenote.transform.parent = gameObject.transform;
 			timenote.transform.localPosition = newpos;
 			timenote.transform.SetAsLastSibling();
+
+			trt = PlayerState.Instance.arrowFab.transform as RectTransform;
+			RectTransform trt2 = transform as RectTransform;
+
+			//newpos = new Vector3(im.rectTransform.position.x,im.rectTransform.position.y - trt.sizeDelta.y,0);
+			newpos = im.transform.localPosition/4.5f;//new Vector3(trt2.sizeDelta.x, trt2.sizeDelta.y - trt.sizeDelta.y,0);
+
+
+
+			arrow = Instantiate(PlayerState.Instance.arrowFab,Vector3.zero,im.rectTransform.rotation) as GameObject; //create note in middle of string
+			arrow.transform.parent = gameObject.transform;
+			arrow.transform.localPosition = newpos;
+			arrow.transform.parent = timenote.transform;
+
 
 
 		}else{

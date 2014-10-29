@@ -9,6 +9,7 @@ public class PlayerState : Singleton<PlayerState> {
 	[SerializeField]
 	public Sprite ropeSprite;//have to put this here because reasons
 	public GameObject noteFab;//also have to put this here because reasons
+	public GameObject arrowFab;//see above
 
 
 
