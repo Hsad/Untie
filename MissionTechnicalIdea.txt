@@ -1,0 +1,16 @@
+types of actions:
+	take (steal, pick up supplies)
+	leave (lay incrimating evidence, place bomb)
+	change state (turn on power, break car, assassinate)
+
+take actions add objects to the groups posession
+leave remove objects
+change state acts upon objects in the world
+
+locations are where objects exist
+objects can exist in diffrent locations at diffrent times
+
+missions involve goals and requirements
+goals are the stated action to preform on an object
+
+requirements are the presence, or absence, of objects in particular states 
