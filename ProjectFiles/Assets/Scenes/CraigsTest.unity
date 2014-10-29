@@ -1010,6 +1010,7 @@ MonoBehaviour:
   publicOpinion: 0
   violence: 0
   ropeSprite: {fileID: 21300000, guid: 83d8ce452260f9941a623d05905b2f5d, type: 3}
+  noteFab: {fileID: 100002, guid: b18fe910701824b4188219bf39974a84, type: 2}
   intel: []
   notes: []
 --- !u!4 &784780093

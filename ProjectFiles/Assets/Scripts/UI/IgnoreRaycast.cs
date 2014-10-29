@@ -6,15 +6,11 @@ using UnityEngine.EventSystems;
 public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHandler, IEndDragHandler, IDragHandler {
 	public bool pinned = false;
 	public Dossier d = null;//reference to dossier
-
 	private Image im;//create an image
-
 	public GameObject target;//the target (formed by connecting strings)
+	public GameObject timenote;
 
-
-
-
-
+	bool dragging = false;
 
 	public bool IsRaycastLocationValid(Vector2 sp, Camera eventCamera)//make the image ignore raycasting while it's being dragged
 	{
@@ -44,13 +40,28 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	}
 
 	void kill(){
-		//Destroy(gameObject);
+
+		if(target == null){//clear picture
+			Destroy(gameObject);
+		}else{//else clear target
+			im.rectTransform.sizeDelta = new Vector2(0,30);//make string this height, width doesn't matter
+			target = null;
+			Destroy(timenote);
+		}
+	}
+
+	void Update(){
+		if(pinned && target == null && !dragging){//get rid of string if target has been destroyed
+			im.rectTransform.sizeDelta = new Vector2(0,30);
+		}
 	}
 
 
 
 	public void OnBeginDrag(PointerEventData eventData){
 		target = null; // reset connection
+		Destroy(timenote);
+		dragging = true;
 	}
 	
 	public void OnDrag(PointerEventData data){
@@ -83,10 +94,17 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	}
 
 	public void OnEndDrag(PointerEventData data){
+		dragging = false;
 		GameObject tmp1 = data.pointerCurrentRaycast.go;
+		if(tmp1 == null || tmp1 == gameObject) return;
 		IgnoreRaycast tmp2 = tmp1.GetComponent<IgnoreRaycast>();
-		if(tmp2 != null){//if the drag ends on a valid location
+		if(tmp2 != null){//if the drag ends on a valid location, set target
 			target = tmp1;
+			timenote = Instantiate(PlayerState.Instance.noteFab,im.rectTransform.position,Quaternion.identity) as GameObject;
+			timenote.transform.parent = gameObject.transform;
+			timenote.transform.SetAsLastSibling();
+
+
 		}else{
 			im.rectTransform.sizeDelta = new Vector2(0,30);//make string this height, width doesn't matter
 		}
