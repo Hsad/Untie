@@ -100,8 +100,12 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 		IgnoreRaycast tmp2 = tmp1.GetComponent<IgnoreRaycast>();
 		if(tmp2 != null){//if the drag ends on a valid location, set target
 			target = tmp1;
-			timenote = Instantiate(PlayerState.Instance.noteFab,im.rectTransform.position,Quaternion.identity) as GameObject;
+			//timenote = Instantiate(PlayerState.Instance.noteFab,im.rectTransform.position,Quaternion.identity) as GameObject; //create note in middle of string
+			RectTransform trt = transform as RectTransform;
+			Vector3 newpos = new Vector3(0, -(trt.position.y + trt.sizeDelta.y),0);
+			timenote = Instantiate(PlayerState.Instance.noteFab,Vector3.zero,Quaternion.identity) as GameObject; //create note at bottom of node
 			timenote.transform.parent = gameObject.transform;
+			timenote.transform.localPosition = newpos;
 			timenote.transform.SetAsLastSibling();
 
 
