@@ -17,4 +17,9 @@ public class PlayerState : Singleton<PlayerState> {
 
 	public List<string> notes;//keeps track of extra information, each string = one page of the notebook
 
+
+	//----------------------
+	// Notes:
+	//	Dossiers should all be generated with a script by reading a JSON file or something
+
 }

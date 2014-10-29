@@ -3,11 +3,13 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHandler, IDragHandler, IEndDragHandler {
+public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHandler, IEndDragHandler, IDragHandler {
 	public bool pinned = false;
 	public Dossier d = null;//reference to dossier
 
 	private Image im;//create an image
+
+	public GameObject target;//the target (formed by connecting strings)
 
 
 
@@ -27,6 +29,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 		pinned = true;
 
 		GameObject child = new GameObject("linedraw");
+		child.AddComponent("IgnoreRaycast");
 		child.transform.parent = gameObject.transform;
 		//create line drawing thing
 
@@ -47,6 +50,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 
 
 	public void OnBeginDrag(PointerEventData eventData){
+		target = null; // reset connection
 	}
 	
 	public void OnDrag(PointerEventData data){
@@ -68,8 +72,6 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			Vector2 localPoint;
 			RectTransformUtility.ScreenPointToLocalPointInRectangle(transform as RectTransform, data.position, data.pressEventCamera, out localPoint);
 
-			print(localPoint);
-
 			im.rectTransform.localPosition = localPoint/2;
 
 
@@ -80,15 +82,14 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 		}
 	}
 
-	public void OnEndDrag(PointerEventData eventData){
-		//if no valid target to string up, do this
-		im.rectTransform.sizeDelta = new Vector2(0,30);//make string this height, width doesn't matter
-
-	}
-
-	void DrawLine(Vector2 a, Vector2 b, Sprite someSprite){
-
-
+	public void OnEndDrag(PointerEventData data){
+		GameObject tmp1 = data.pointerCurrentRaycast.go;
+		IgnoreRaycast tmp2 = tmp1.GetComponent<IgnoreRaycast>();
+		if(tmp2 != null){//if the drag ends on a valid location
+			target = tmp1;
+		}else{
+			im.rectTransform.sizeDelta = new Vector2(0,30);//make string this height, width doesn't matter
+		}
 	}
 
 }

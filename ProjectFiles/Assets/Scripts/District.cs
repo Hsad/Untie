@@ -53,6 +53,9 @@ public class District : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 		var originalObj = data.pointerDrag;
 		if (originalObj == null)
 			return null;
+
+		if(originalObj.GetComponent<DragMe>() == null)
+			return null;
 		
 		var srcImage = originalObj.GetComponent<Image>();
 		if (srcImage == null)
