@@ -82,7 +82,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlane, data.position, data.pressEventCamera, out globalMousePos))
 		{
 			rt.position = globalMousePos;
-			rt.rotation =  m_DraggingPlane.rotation;
+			//rt.rotation =  m_DraggingPlane.rotation;
 
 		}
 	}

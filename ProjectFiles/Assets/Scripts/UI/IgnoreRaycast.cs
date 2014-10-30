@@ -100,7 +100,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 		GameObject tmp1 = data.pointerCurrentRaycast.go;
 		if(tmp1 == null || tmp1 == gameObject) return;
 		IgnoreRaycast tmp2 = tmp1.GetComponent<IgnoreRaycast>();
-		if(tmp2 != null){//if the drag ends on a valid location, set target
+		if(tmp2 != null && tmp2.pinned){//if the drag ends on a valid location, set target
 			target = tmp1;
 			//timenote = Instantiate(PlayerState.Instance.noteFab,im.rectTransform.position,Quaternion.identity) as GameObject; //create note in middle of string
 			RectTransform trt = transform as RectTransform;

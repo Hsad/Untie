@@ -534,6 +534,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 4e20638eea7c28044a3f9589f96c7ffb, type: 2}
+      propertyPath: m_TagString
+      value: pinnable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e20638eea7c28044a3f9589f96c7ffb, type: 2}
   m_RootGameObject: {fileID: 875121364}
@@ -1126,7 +1130,7 @@ GameObject:
   - 114: {fileID: 875121366}
   m_Layer: 5
   m_Name: Dossier
-  m_TagString: Untagged
+  m_TagString: pinnable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
