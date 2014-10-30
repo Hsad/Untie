@@ -68,11 +68,11 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 			m_DraggingPlane = data.pointerEnter.transform as RectTransform;
 
 			Canvas newcanvas = FindInParents<Canvas>(data.pointerEnter);
-			if(newcanvas != canvas){
+			if(newcanvas != canvas && newcanvas.tag == "pinnable"){
 
 				m_DraggingIcon.transform.SetParent (newcanvas.transform, false);
 				m_DraggingIcon.transform.SetAsLastSibling();
-				m_DraggingIcon.transform.localScale = canvas.transform.localScale;
+				m_DraggingIcon.transform.localScale = canvas.transform.lossyScale;
 				canvas = newcanvas;
 			}
 		}
@@ -92,6 +92,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		if (m_DraggingIcon != null)
 			//Destroy(m_DraggingIcon);
 			m_DraggingIcon.GetComponent<IgnoreRaycast>().pin();
+		canvas = FindInParents<Canvas>(gameObject);
 	}
 
 	static public T FindInParents<T>(GameObject go) where T : Component

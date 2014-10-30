@@ -54,6 +54,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	void Update(){
 		if(pinned && target == null && !dragging){//get rid of string if target has been destroyed
 			im.rectTransform.sizeDelta = new Vector2(0,30);
+			Destroy(timenote);
 		}
 	}
 
