@@ -3,20 +3,7 @@ using System.Collections;
 
 public class Dossier : MonoBehaviour {
 
-	public string Name;//name of the person on file
-
-	//other relevant dossier stuff goes here
-
-	//this stuff is for handling animation
-
-	public Animator anim;
-
-	void Awake(){
-		anim = GetComponent<Animator>();
-	}
-
-	public void Update(){
-		anim.SetBool("showing",CameraLook.isInteracting);
-	}
-
+	public string biotext;//name, etc.
+	public string details;//additional info
+	public Sprite photo;//the mugshot sprite
 }
