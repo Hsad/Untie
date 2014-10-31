@@ -15,9 +15,9 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 	void Awake(){
 		canvas = FindInParents<Canvas>(gameObject);
-		if(canvas != null){
-			d = canvas.GetComponent<Dossier>();
-		}
+		//if(canvas != null){
+			//d = canvas.GetComponent<Dossier>();
+		//}
 	}
 
 	public GameObject icon {//get the current icon (read only)
@@ -28,7 +28,6 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
-
 		if (canvas == null)
 			return;
 
@@ -68,11 +67,11 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 			m_DraggingPlane = data.pointerEnter.transform as RectTransform;
 
 			Canvas newcanvas = FindInParents<Canvas>(data.pointerEnter);
-			if(newcanvas != canvas){
+			if(newcanvas != canvas && newcanvas.tag == "pinnable"){
 
 				m_DraggingIcon.transform.SetParent (newcanvas.transform, false);
 				m_DraggingIcon.transform.SetAsLastSibling();
-				m_DraggingIcon.transform.localScale = canvas.transform.localScale;
+				m_DraggingIcon.transform.localScale = canvas.transform.lossyScale;
 				canvas = newcanvas;
 			}
 		}
@@ -82,16 +81,25 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 		if (RectTransformUtility.ScreenPointToWorldPointInRectangle(m_DraggingPlane, data.position, data.pressEventCamera, out globalMousePos))
 		{
 			rt.position = globalMousePos;
-			rt.rotation =  m_DraggingPlane.rotation;
+			//rt.rotation =  m_DraggingPlane.rotation;
 
 		}
 	}
 
-	public void OnEndDrag(PointerEventData eventData)
+	public void OnEndDrag(PointerEventData data)
 	{
-		if (m_DraggingIcon != null)
-			//Destroy(m_DraggingIcon);
+		if (m_DraggingIcon != null){
+			Canvas newcanvas = FindInParents<Canvas>(data.pointerEnter);
+			if(newcanvas == null || newcanvas.tag != "pinnable" || newcanvas == FindInParents<Canvas>(data.pointerDrag)){
+				//Destroy(m_DraggingIcon); //<-- destroying the object makes unity crash?!?!
+				m_DraggingIcon.SetActive(false);
+				m_DraggingIcon.transform.parent = null;
+				Destroy(m_DraggingIcon);
+				return;
+			}
 			m_DraggingIcon.GetComponent<IgnoreRaycast>().pin();
+		}
+		canvas = FindInParents<Canvas>(gameObject);
 	}
 
 	static public T FindInParents<T>(GameObject go) where T : Component

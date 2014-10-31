@@ -1,22 +1,57 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using SimpleJSON;
 
-public class Dossier : MonoBehaviour {
+public class Dossier{
 
-	public string Name;//name of the person on file
+	//visual data
+	public Sprite photo;
+	public string biotext, details;
 
-	//other relevant dossier stuff goes here
+	//intel values
+	public string type, prerequisites, inputs, success_vars, failure_vars,success_weights;
 
-	//this stuff is for handling animation
 
-	public Animator anim;
-
-	void Awake(){
-		anim = GetComponent<Animator>();
+	public Dossier(){
 	}
 
-	public void Update(){
-		anim.SetBool("showing",CameraLook.isInteracting);
+	public Dossier(string filename){
+		fromFile(filename);
 	}
 
+
+	public void displayData(GameObject obj){//apply this script's information to the in-game object (for viewing)
+		Transform ms = obj.transform.Find("Mugshot");
+		ms.GetComponent<Image>().sprite = photo;
+		ms.GetComponent<DragMe>().d = this;
+		obj.transform.Find("BioText").GetComponent<Text>().text = biotext;
+		obj.transform.Find("DetailText").GetComponent<Text>().text = details;
+
+
+
+	}
+
+
+
+
+	public void fromFile(string filename){//set the variables for this document from a file
+		TextAsset f = Resources.Load("IntelData/" + filename) as TextAsset;
+		if(f != null){
+			JSONNode node = JSON.Parse(f.text);
+			type = node["type"];
+			prerequisites = node["prerequisites"];
+			inputs = node["inputs"];
+			success_vars = node["success_vars"];
+			failure_vars = node["failure_vars"];
+			success_weights = node["success_weights"];
+
+			photo = Resources.Load<Sprite>("Photos/" + node["photo"]);
+			biotext = node["biotext"];
+			details = node["details"];					
+		}else{
+			Debug.Log("Invalid file: " + filename);
+		}
+
+	}
 }

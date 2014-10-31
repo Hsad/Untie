@@ -21,9 +21,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	private Button MyButton = null; // assign in the editor
 	
 	public void pin(){
-		MyButton = gameObject.AddComponent<Button>();
-		MyButton.onClick.AddListener(() => { kill();});  //destroy the object when it's clicked
-		pinned = true;
+
 
 		GameObject child = new GameObject("linedraw");
 		child.AddComponent("IgnoreRaycast");
@@ -38,9 +36,17 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 		im.rectTransform.localPosition = Vector3.zero;
 		im.rectTransform.SetAsLastSibling();//draw in front of everything else
 		im.sprite = PlayerState.Instance.ropeSprite;
+
+		MyButton = gameObject.AddComponent<Button>();
+		MyButton.onClick.AddListener(() => { kill();});  //destroy the object when it's clicked
+		pinned = true;
+
+		print("IMAGE PINNED");
 	}
 
 	void kill(){
+		print("BUTTON PRESSED");
+
 
 		if(target == null){//clear picture
 			Destroy(gameObject);
@@ -49,11 +55,13 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			target = null;
 			Destroy(timenote);
 		}
+		print("BUTTON DONE PRESSING");
 	}
 
 	void Update(){
 		if(pinned && target == null && !dragging){//get rid of string if target has been destroyed
 			im.rectTransform.sizeDelta = new Vector2(0,30);
+			Destroy(timenote);
 		}
 	}
 
@@ -99,7 +107,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 		GameObject tmp1 = data.pointerCurrentRaycast.go;
 		if(tmp1 == null || tmp1 == gameObject) return;
 		IgnoreRaycast tmp2 = tmp1.GetComponent<IgnoreRaycast>();
-		if(tmp2 != null){//if the drag ends on a valid location, set target
+		if(tmp2 != null && tmp2.pinned){//if the drag ends on a valid location, set target
 			target = tmp1;
 			//timenote = Instantiate(PlayerState.Instance.noteFab,im.rectTransform.position,Quaternion.identity) as GameObject; //create note in middle of string
 			RectTransform trt = transform as RectTransform;
@@ -110,7 +118,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			timenote.transform.SetAsLastSibling();
 
 			trt = PlayerState.Instance.arrowFab.transform as RectTransform;
-			RectTransform trt2 = transform as RectTransform;
+			//RectTransform trt2 = transform as RectTransform;
 
 			//newpos = new Vector3(im.rectTransform.position.x,im.rectTransform.position.y - trt.sizeDelta.y,0);
 			newpos = im.transform.localPosition/4.5f;//new Vector3(trt2.sizeDelta.x, trt2.sizeDelta.y - trt.sizeDelta.y,0);
