@@ -21,9 +21,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	private Button MyButton = null; // assign in the editor
 	
 	public void pin(){
-		MyButton = gameObject.AddComponent<Button>();
-		MyButton.onClick.AddListener(() => { kill();});  //destroy the object when it's clicked
-		pinned = true;
+
 
 		GameObject child = new GameObject("linedraw");
 		child.AddComponent("IgnoreRaycast");
@@ -38,9 +36,17 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 		im.rectTransform.localPosition = Vector3.zero;
 		im.rectTransform.SetAsLastSibling();//draw in front of everything else
 		im.sprite = PlayerState.Instance.ropeSprite;
+
+		MyButton = gameObject.AddComponent<Button>();
+		MyButton.onClick.AddListener(() => { kill();});  //destroy the object when it's clicked
+		pinned = true;
+
+		print("IMAGE PINNED");
 	}
 
 	void kill(){
+		print("BUTTON PRESSED");
+
 
 		if(target == null){//clear picture
 			Destroy(gameObject);
@@ -49,6 +55,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			target = null;
 			Destroy(timenote);
 		}
+		print("BUTTON DONE PRESSING");
 	}
 
 	void Update(){
