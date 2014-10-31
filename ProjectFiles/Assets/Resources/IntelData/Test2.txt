@@ -1,0 +1,11 @@
+{
+	"type": "place",
+    "biotext": "Building Test",
+    "details": "It's a building",
+	"photo": "objective1",
+	"prerequisites": [],
+	"inputs": [],
+	"success_vars": [],
+	"failure_vars": [],
+	"success_weights": []    
+}

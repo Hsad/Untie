@@ -60,8 +60,11 @@
      <Compile Include="Assets\Scripts\UI\IgnoreRaycast.cs" />
      <Compile Include="Assets\Scripts\UI\IntelFolder.cs" />
      <Compile Include="Assets\Scripts\UI\RaycastMask.cs" />
-     <None Include="Assets\MissionFiles\Test1.txt" />
+     <Compile Include="Assets\Scripts\jsontestscript.cs" />
+     <None Include="Assets\Resources\IntelData\Test1.txt" />
+     <None Include="Assets\Resources\IntelData\AntonNovik.txt" />
      <None Include="Assets\Fonts\Secret-Typewriter\Cpr.Sparhelt font License.txt" />
+     <None Include="Assets\Resources\IntelData\Test2.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

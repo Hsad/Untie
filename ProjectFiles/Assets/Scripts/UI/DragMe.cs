@@ -14,10 +14,10 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 	private RectTransform m_DraggingPlane;
 
 	void Awake(){
-		canvas = FindInParents<Canvas>(gameObject);
-		if(canvas != null){
-			d = canvas.GetComponent<Dossier>();
-		}
+		//canvas = FindInParents<Canvas>(gameObject);
+		//if(canvas != null){
+			//d = canvas.GetComponent<Dossier>();
+		//}
 	}
 
 	public GameObject icon {//get the current icon (read only)

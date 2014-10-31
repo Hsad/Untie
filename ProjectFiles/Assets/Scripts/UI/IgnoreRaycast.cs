@@ -111,7 +111,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			timenote.transform.SetAsLastSibling();
 
 			trt = PlayerState.Instance.arrowFab.transform as RectTransform;
-			RectTransform trt2 = transform as RectTransform;
+			//RectTransform trt2 = transform as RectTransform;
 
 			//newpos = new Vector3(im.rectTransform.position.x,im.rectTransform.position.y - trt.sizeDelta.y,0);
 			newpos = im.transform.localPosition/4.5f;//new Vector3(trt2.sizeDelta.x, trt2.sizeDelta.y - trt.sizeDelta.y,0);
