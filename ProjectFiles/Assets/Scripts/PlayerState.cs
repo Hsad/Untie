@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class PlayerState : Singleton<PlayerState> {
 	public int publicOpinion = 0;//public opinion level
 	public int violence = 0;//amount of violence inflicted on civilians attributed to your group
-
+	public int clock = 0;
 	[SerializeField]
 	public Sprite ropeSprite;//have to put this here because reasons
 	public GameObject noteFab;//also have to put this here because reasons
