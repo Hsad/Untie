@@ -33,8 +33,8 @@ public class PlayerState : Singleton<PlayerState> {
 		clock ++;
 	}
 	public bool check_materials(string temp_change, int temp_num){
-		if (materials.TryGetValue(change, change_num)){
-			materials[change] += change_num;
+		if (materials.TryGetValue(temp_change, out temp_num)){
+			materials[temp_change] += temp_num;
 			if ( materials[temp_change] > 0){
 				return true;
 			}
@@ -44,7 +44,7 @@ public class PlayerState : Singleton<PlayerState> {
 		}
 	}
 	public void update_materials(string change, int change_num){
-		if (materials.TryGetValue(change, change_num)){
+		if (materials.TryGetValue(change,out change_num)){
 			materials[change] += change_num;
 		}else{
 			materials.Add(change, change_num);
