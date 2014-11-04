@@ -10,7 +10,7 @@ public class PlayerState : Singleton<PlayerState> {
 	public Sprite ropeSprite;//have to put this here because reasons
 	public GameObject noteFab;//also have to put this here because reasons
 	public GameObject arrowFab;//see above
-
+	
 
 
 	
@@ -26,5 +26,37 @@ public class PlayerState : Singleton<PlayerState> {
 	//----------------------
 	// Notes:
 	//	Dossiers should all be generated with a script by reading a JSON file or something
-
+	public int get_time(){
+		return clock;
+	}
+	public void update_time(){
+		clock ++;
+	}
+	public bool check_materials(string temp_change, int temp_num){
+		if (materials.TryGetValue(change, change_num)){
+			materials[change] += change_num;
+			if ( materials[temp_change] > 0){
+				return true;
+			}
+			return false;
+		}else{
+			return false;
+		}
+	}
+	public void update_materials(string change, int change_num){
+		if (materials.TryGetValue(change, change_num)){
+			materials[change] += change_num;
+		}else{
+			materials.Add(change, change_num);
+		}
+	}
+	public void update_public(){
+		publicOpinion ++;
+	}
+	public void update_violence(){
+		violence ++;
+	}
+	public void update_notes(string new_info){
+		notes.Add(new_info);
+	}
 }

@@ -14,20 +14,23 @@ public class notes_changing : MonoBehaviour {
 		data.Add("boo");
 		data.Add("halloween");
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		//notes.text = ("his");
-		//check if need to add notes
-		//
+
+	public void page_change(){ 
+		if (num_pages == (data.Count - 1)){
+			notes.text = data[num_pages];
+		}else{
+			num_pages ++;
+			notes.text = data[num_pages];
+		}
+
 	}
-	public void page_change(){
-		num_pages ++;
-		notes.text = data[num_pages];
+	public void add_page(string new_intel){
+		data.Add (new_intel);
+		num_pages = (data.Count - 1);
 	}
 	public void prev_page(){
 		if( num_pages > 0){
-			num_pages ++;
+			num_pages --;
 			notes.text = data[num_pages];
 		}
 	}
