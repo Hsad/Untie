@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 //using UnityEngine.EventSystems;
 public class Phone : MonoBehaviour {
-
 	private bool clicked = false;
 	private bool inside = false;
 	private List<Numbers> book;
 	private int page_number = 1;
-
+	private int max_page = 2;
 	public class Numbers{
 		private string name;
 		private int page;
@@ -45,6 +45,7 @@ public class Phone : MonoBehaviour {
 		book.Add(temp4);
 		var temp5 = new Numbers("Prev_button", -2);
 		book.Add(temp5);
+
 	}
 	void disable_buttons(string ignore){
 		//Iterating through all the buttons and disabling them
@@ -105,12 +106,18 @@ public class Phone : MonoBehaviour {
 		reactivate_buttons();
 	}
 	public void call_next(){
-		page_number ++;
-		new_page();
+		if ( page_number < max_page ){
+			page_number ++;
+			new_page();
+		}
+
 	}
 	public void call_prev(){
-		page_number --;
-		new_page();
+		if ( page_number > 0){
+			page_number --;
+			new_page();
+		}
+
 	}
 	/*public Dictionary<string,string> contactInfo; //dictionary of <Name,phone#>
 

@@ -11,7 +11,6 @@ public class json_parse : MonoBehaviour {
 		public int time_complete = 0;
 		//boolean to determine if complete
 		public bool completed = false;
-
 		public mission(){
 			//default constructor
 			time_complete = 0;
@@ -35,6 +34,7 @@ public class json_parse : MonoBehaviour {
 		}
 		public bool test_time(){
 			//testing the time
+			//matain clock
 			if ( PlayerState.Instance.get_time()< time_complete){
 				PlayerState.Instance.update_time();
 			}else if (PlayerState.Instance.get_time() == time_complete){
@@ -83,6 +83,7 @@ public class json_parse : MonoBehaviour {
 				//checking parameters
 
 				//succed
+				//check player location, enemy location , correct character-> correct
 			}
 		}
 	}
@@ -152,7 +153,8 @@ public class json_parse : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-
+		//initiaize starting money
+		PlayerState.Instance.update_materials("money", 500);
 	}
 	
 	// Update is called once per frame

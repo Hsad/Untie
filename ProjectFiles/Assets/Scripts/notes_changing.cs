@@ -13,6 +13,7 @@ public class notes_changing : MonoBehaviour {
 		data.Add("hiyo");
 		data.Add("boo");
 		data.Add("halloween");
+		notes.text = data[num_pages];
 	}
 
 	public void page_change(){ 
