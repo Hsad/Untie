@@ -1,0 +1,30 @@
+{
+	"television":{
+		"prerequisites":["Protest"],
+		"play": "Dryovska is in an uproar over the sizable protest of Cheskovan rule carried out by the organization called the Light of Dryovska. Multiple government officials have stated that the unrest is a mere fad, however…",
+	},
+	"television":{
+		"prerequisites":["bomb"],
+		"play":"A shocking act of terrorism by the terrorists identifying as the Light of Dryovska left hundreds without power, including hospitals in Polis District. There were 43 confirmed deaths from the collapse of the plant and accidents from the loss of power, and many more injured. The government has begun to import weapons to fight the terrorist menace, and is…",		
+	},
+	"television":{
+		"prerequisites":["!supplies"],
+		"play":"Well personally, I don’t believe the self-proclaimed ‘Light of Dryovska’ will be doing much of anything. They certainly don’t seem to have much support with the populace, ahahahah! More with Leif Danburg after the break.",
+	},
+	"television":{
+		"prerequisites":["rob_food"],
+		"play":"The perpetrator of the theft of food stores from Skladista District has been confirmed to be the revolutionary organization known as the Light of Dryovska. Why they would steal from the very people they claim to liberate is a separate question; however…",
+	},
+	"television":{
+		"prerequisites":["money_elderly"],
+		"play":"Corrupt policemen were revealed by the organization known as the Light of Dryovska to be extorting money from retired citizens in Penzio District. The chief of police held a press conference to state that this was an isolated incident blown out of proportion; however…",
+	},
+	"television":{
+		"prerequisites":["money_kept"],
+		"play":"Numerous retired citizens in Penzio District have been robbed by individuals revealed to belong to the criminal group known as the Light of Dryovska. Law enforcement speculates that they are responsible for a host of other crimes as well, such as…",
+	},
+	"television":{
+		"prerequisites":["gala_attk"],
+		"play":"Multiple members of the terrorist organization referred to as the Light of Dryovska were arrested after they brazen attempted to steal the food from the Dryovskan Enlightenment Day Gala.”,		
+	}
+}

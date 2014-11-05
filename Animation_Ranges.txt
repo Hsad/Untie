@@ -1,0 +1,7 @@
+1       : Idle (single frame)
+10-41   : Walk (on loop)
+49-74   : "No"
+75-102  : "Yes"
+103-126 : "Do this"
+127-150 : Angry
+151-186 : Explaining
