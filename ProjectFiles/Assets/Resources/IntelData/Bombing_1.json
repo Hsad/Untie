@@ -1,0 +1,21 @@
+{
+	"Bombing":{
+		"title":"power",
+		"prerequisites":[["c4",5],["guns", 3]],
+		"requirements":["Vojni",1300,30],
+		"success":{
+			"violence":5,
+			"public_opinion":10,
+			"materials":[["money", 500]],
+			"dialogue":[["tv","part3",4],["phone","part3",5]],
+			"intel":["Protest_1", "acquire_2"]
+		},
+		"failure":{
+			"violence":-2,
+			"public_opinion":-8,
+			"materials":[],
+			"dialogue":[["tv","part3",6],["phone","part3",7]],
+			"intel":["Protest_1"]
+		}
+	}
+}

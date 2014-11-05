@@ -1,0 +1,21 @@
+{
+	"Protest":{
+		"title":"defacement",
+		"prerequisites":[],
+		"requirements":["Kuci",1000,10],
+		"success":{
+			"violence":0,
+			"public_opinion":10,
+			"materials":[["money", 200]],
+			"dialogue":[["mission","part4",3],["mission","part4",4]],
+			"intel":["acquire_2", "bribe_1"]
+		},
+		"failure":{
+			"violence":0,
+			"public_opinion":2,
+			"materials":[],
+			"dialogue":[["mission","part4",5]],
+			"intel":["acquire_2"]
+		}
+	}
+}

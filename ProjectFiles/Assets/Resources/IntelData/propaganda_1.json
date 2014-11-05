@@ -1,0 +1,21 @@
+{
+	"propaganda":{
+		"title":"blog",
+		"prerequisites":[],
+		"requirements":["Vlada",1300,30],
+		"success":{
+			"violence":0,
+			"public_opinion":5,
+			"materials":[],
+			"dialogue":[["mission","part1",0],["mission","part1",1]],
+			"intel":["propaganda_2"]
+		},
+		"failure":{
+			"violence":0,
+			"public_opinion":2,
+			"materials":[],
+			"dialogue":[["mission","part1",2]],
+			"intel":[]
+		}
+	}
+}

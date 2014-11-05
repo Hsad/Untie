@@ -1,0 +1,21 @@
+{
+	"Propaganda":{
+		"title":"fundraiser",
+		"prerequisites":["blog","defacement"],
+		"requirements":["Polis",1200,30],
+		"success":{
+			"violence":0,
+			"public_opinion":3,
+			"materials":[],
+			"dialogue":[["mission","part2",2],["mission","part2",3]],
+			"intel":["propaganda_2"]
+		},
+		"failure":{
+			"violence":0,
+			"public_opinion":-2,
+			"materials":[],
+			"dialogue":[["mission","part2",4],["mission","part2",5]],
+			"intel":["propaganda_2"]
+		}
+	}
+}
