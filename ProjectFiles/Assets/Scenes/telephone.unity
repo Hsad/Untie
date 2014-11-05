@@ -625,18 +625,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 1209110022}
-        m_MethodName: news
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &345195458
@@ -1204,6 +1192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c719b67076cca3541a1e8cc3f968f8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p_story: {fileID: 1209110022}
 --- !u!23 &654958185
 Renderer:
   m_ObjectHideFlags: 0
@@ -1853,7 +1842,6 @@ GameObject:
   - 33: {fileID: 1192250165}
   - 65: {fileID: 1192250164}
   - 23: {fileID: 1192250163}
-  - 114: {fileID: 1192250162}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1861,17 +1849,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1192250162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1192250161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c478f9b657cd2164c95d255eda51b37a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1192250163
 Renderer:
   m_ObjectHideFlags: 0
@@ -1955,8 +1932,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -327.600006, y: -57.8330002}
-  m_SizeDelta: {x: 130, y: 30}
+  m_AnchoredPosition: {x: -200.899994, y: -19.7000008}
+  m_SizeDelta: {x: 383.399994, y: 59.9000015}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1209110020
 MonoBehaviour:
@@ -1981,7 +1958,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!222 &1209110021
@@ -2003,7 +1980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phone_story: {fileID: 1209110020}
-  conversation: {fileID: 2105654170}
+  phone_conversation: {fileID: 2105654170}
 --- !u!1001 &1272056212
 Prefab:
   m_ObjectHideFlags: 0
@@ -2501,7 +2478,6 @@ GameObject:
   - 33: {fileID: 1481423343}
   - 65: {fileID: 1481423342}
   - 23: {fileID: 1481423341}
-  - 114: {fileID: 1481423340}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -2509,17 +2485,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1481423340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1481423339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79ca6ab01f88d14f81fb7d595d7a25a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1481423341
 Renderer:
   m_ObjectHideFlags: 0

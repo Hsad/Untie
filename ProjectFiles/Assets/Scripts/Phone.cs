@@ -9,6 +9,7 @@ public class Phone : MonoBehaviour {
 	private List<string> anton_intel;
 	private int page_number = 1;
 	private int max_page = 2;
+	public display_phone_story p_story;
 	public class Numbers{
 		private string name;
 		private int page;
@@ -37,9 +38,6 @@ public class Phone : MonoBehaviour {
 		anton_intel = new List<string>();
 		//adding the button names
 		var temp = new Numbers("anton",1);
-		if ( temp == null){
-			print ("failed");
-		}
 		book.Add(temp);
 		var temp2 = new Numbers("extra",1);
 		book.Add (temp2);
@@ -110,12 +108,7 @@ public class Phone : MonoBehaviour {
 	}
 	public void call_anton(){
 		disable_buttons("anton");
-		display_phone_story display_info = new display_phone_story();
-		if (display_info == null){
-			print ("fuck this shit");
-		}
-		//display_info.news(anton_intel[0]);
-		//print ("made it ");
+		p_story.news (anton_intel[0]);
 		//open buttons up again
 		reactivate_buttons();
 	}

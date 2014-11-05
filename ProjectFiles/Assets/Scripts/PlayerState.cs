@@ -7,9 +7,7 @@ public class PlayerState : Singleton<PlayerState> {
 	public int violence = 0;//amount of violence inflicted on civilians attributed to your group
 	private int clock = 1200;//the time of day (in form: int hhmm)
 	int day = 0;
-
-
-
+	
 	[SerializeField]
 	public Sprite ropeSprite;//have to put this here because reasons
 	public GameObject noteFab;//also have to put this here because reasons
