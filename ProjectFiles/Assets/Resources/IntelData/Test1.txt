@@ -8,7 +8,7 @@
 	"missionlist":["bomb"],
 	"missions":{
 		"bomb":{
-			"prerequisites":[],
+			"prerequisites":[["c4",5]],
 			"requirements":["Fabrika",1200,30],
 			"success":{
 				"violence":5,
@@ -21,7 +21,8 @@
 				"materials":[["c4",-5]]
 			}
 		},
-		"rob":[],
-		"place propaganda":[]
+		"scout":{},
+		"rob":{},
+		"place propaganda":{}
 	}
 }

@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ImportAutoScaleScript.cs" />
      <Compile Include="Assets\Scripts\BoardScripts\BulletinBoard.cs" />
      <Compile Include="Assets\Scripts\BoardScripts\District.cs" />
      <Compile Include="Assets\Scripts\BoardScripts\Dossier.cs" />
@@ -54,6 +53,7 @@
      <Compile Include="Assets\Scripts\BoardScripts\placeNote.cs" />
      <Compile Include="Assets\Scripts\Character Movement\CameraLook.cs" />
      <Compile Include="Assets\Scripts\Character Movement\CameraMove.cs" />
+     <Compile Include="Assets\Scripts\ImportAutoScaleScript.cs" />
      <Compile Include="Assets\Scripts\Notebook_script.cs" />
      <Compile Include="Assets\Scripts\Phone.cs" />
      <Compile Include="Assets\Scripts\PlayerState.cs" />

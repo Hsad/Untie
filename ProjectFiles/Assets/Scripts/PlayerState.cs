@@ -36,6 +36,13 @@ public class PlayerState : Singleton<PlayerState> {
 		return clock;
 	}
 
+	public void set_time(int newtime){
+		if(newtime < clock){//assume next day
+			day++;
+		}
+		clock = newtime;
+	}
+
 	public void update_time(){//increment the time
 		int hour = clock/100;
 		int minute = clock%100;

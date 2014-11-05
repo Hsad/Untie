@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using UnityEngine.EventSystems;
+
 public class IntelFolder : MonoBehaviour {
 	public GameObject front;
 	public GameObject dossier; //the dossier object
@@ -41,9 +43,36 @@ public class IntelFolder : MonoBehaviour {
 
 	}
 
+
+	public void p_exit(){
+		//if the mouse is over the thing, set show to true
+
+		//if the mouse is not over the thing, set show to false only if nothing is being dragged
+
+		if(!EventSystem.current.IsPointerOverGameObject()){
+			anim1.SetBool("showing",false);
+			anim2.SetBool("showing",false);
+		}
+	}
+
+	public void p_click(){
+		//if(EventSystem.current.currentSelectedGameObject == gameObject){
+			bool showing = anim1.GetBool("showing");
+			anim1.SetBool("showing",!showing);
+			anim2.SetBool("showing",!showing);
+		//}
+	}
+
+	public void p_enter(){
+		anim1.SetBool("showing",true);
+		anim2.SetBool("showing",true);
+	}
+
 	
 	public void Update(){
-		anim1.SetBool("showing",CameraLook.isInteracting);
-		anim2.SetBool("showing",CameraLook.isInteracting);
+		if(!CameraLook.isInteracting){
+			anim1.SetBool("showing",false);
+			anim2.SetBool("showing",false);
+		}
 	}
 }
