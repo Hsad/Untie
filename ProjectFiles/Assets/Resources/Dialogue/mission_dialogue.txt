@@ -11,8 +11,8 @@
 		"Ivan: we lost a great many a person in that raid"
 	],
 	"part2":[	
-		"Anton: Good work now with cars we can go supply our men",
-		"you: Thank you",
+		"Anton: Good work now with cars we can go supply our men and reacht he front lines faster.",
+		"you: Thank you, it was my honor to aid the revolution in the best possible way. ",
 		"You: “I’ve compiled the sources. Expect them within the day.”,
 		"Ivan: Good. Before making an army, you must feed an army. Take care, comrade.”
 		"Ivan: If this is the extent of your abilities, I have overestimated you",
