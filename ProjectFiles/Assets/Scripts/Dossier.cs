@@ -10,7 +10,7 @@ public class Dossier{
 	public string biotext, details;
 
 	//intel values
-	public string type, prerequisites, inputs, success_vars, failure_vars,success_weights;
+	public string name,type, prerequisites, inputs, success_vars, failure_vars,success_weights;
 
 
 	public Dossier(){
@@ -48,7 +48,8 @@ public class Dossier{
 
 			photo = Resources.Load<Sprite>("Photos/" + node["photo"]);
 			biotext = node["biotext"];
-			details = node["details"];					
+			details = node["details"];
+			name = node["name"];
 		}else{
 			Debug.Log("Invalid file: " + filename);
 		}

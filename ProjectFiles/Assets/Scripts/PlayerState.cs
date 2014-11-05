@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerState : Singleton<PlayerState> {
-	public int publicOpinion = 0;//public opinion level
-	public int violence = 0;//amount of violence inflicted on civilians attributed to your group
-	public int clock = 0;
+	private int publicOpinion = 0;//public opinion level
+	private int violence = 0;//amount of violence inflicted on civilians attributed to your group
+	private int clock = 0;
 	[SerializeField]
 	public Sprite ropeSprite;//have to put this here because reasons
 	public GameObject noteFab;//also have to put this here because reasons
 	public GameObject arrowFab;//see above
+
+	public placeNote notePrompt;//reference to the note writing interface
 	
 
 

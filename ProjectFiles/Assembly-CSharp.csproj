@@ -46,12 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Prefabs\ImportAutoScaleScript.cs" />
+     <Compile Include="Assets\ImportAutoScaleScript.cs" />
      <Compile Include="Assets\Scripts\BulletinBoard.cs" />
      <Compile Include="Assets\Scripts\Character Movement\CameraLook.cs" />
      <Compile Include="Assets\Scripts\Character Movement\CameraMove.cs" />
      <Compile Include="Assets\Scripts\District.cs" />
      <Compile Include="Assets\Scripts\Dossier.cs" />
+     <Compile Include="Assets\Scripts\Notebook_script.cs" />
      <Compile Include="Assets\Scripts\Phone.cs" />
      <Compile Include="Assets\Scripts\PlayerState.cs" />
      <Compile Include="Assets\Scripts\SimpleJSON.cs" />
@@ -61,6 +62,14 @@
      <Compile Include="Assets\Scripts\UI\IgnoreRaycast.cs" />
      <Compile Include="Assets\Scripts\UI\IntelFolder.cs" />
      <Compile Include="Assets\Scripts\UI\RaycastMask.cs" />
+     <Compile Include="Assets\Scripts\data_note.cs" />
+     <Compile Include="Assets\Scripts\json_parse.cs" />
+     <Compile Include="Assets\Scripts\notes_changing.cs" />
+     <Compile Include="Assets\Scripts\placeNote.cs" />
+     <Compile Include="Assets\Scripts\player_slcik.cs" />
+     <Compile Include="Assets\Scripts\television.cs" />
+     <Compile Include="Assets\Scripts\test_classes.cs" />
+     <Compile Include="Assets\Scripts\timesetter.cs" />
      <None Include="Assets\Resources\IntelData\Test1.txt" />
      <None Include="Assets\Resources\IntelData\AntonNovik.txt" />
      <None Include="Assets\Fonts\Secret-Typewriter\Cpr.Sparhelt font License.txt" />

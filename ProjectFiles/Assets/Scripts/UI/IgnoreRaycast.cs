@@ -11,6 +11,10 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	public GameObject timenote;//the note with the time and instructions
 	public GameObject arrow;//arrow to give strings direction
 
+	public string action;
+	public int time;
+
+
 	bool dragging = false;
 
 	public bool IsRaycastLocationValid(Vector2 sp, Camera eventCamera)//make the image ignore raycasting while it's being dragged
@@ -41,13 +45,9 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 		MyButton.onClick.AddListener(() => { kill();});  //destroy the object when it's clicked
 		pinned = true;
 
-		print("IMAGE PINNED");
 	}
 
 	void kill(){
-		print("BUTTON PRESSED");
-
-
 		if(target == null){//clear picture
 			Destroy(gameObject);
 		}else{//else clear target
@@ -55,7 +55,6 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			target = null;
 			Destroy(timenote);
 		}
-		print("BUTTON DONE PRESSING");
 	}
 
 	void Update(){
@@ -129,6 +128,8 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			arrow.transform.parent = gameObject.transform;
 			arrow.transform.localPosition = newpos;
 			arrow.transform.parent = timenote.transform;
+
+			PlayerState.Instance.notePrompt.setup(this,tmp2);
 
 
 
