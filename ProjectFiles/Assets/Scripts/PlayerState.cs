@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerState : Singleton<PlayerState> {
-	private int publicOpinion = 0;//public opinion level
-	private int violence = 0;//amount of violence inflicted on civilians attributed to your group
-	private int clock = 0;
+	public int publicOpinion = 0;//public opinion level
+	public int violence = 0;//amount of violence inflicted on civilians attributed to your group
+	private int clock = 1200;//the time of day (in form: int hhmm)
+	int day = 0;
+
+
+
 	[SerializeField]
 	public Sprite ropeSprite;//have to put this here because reasons
 	public GameObject noteFab;//also have to put this here because reasons
@@ -31,9 +35,22 @@ public class PlayerState : Singleton<PlayerState> {
 	public int get_time(){
 		return clock;
 	}
-	public void update_time(){
-		clock ++;
+
+	public void update_time(){//increment the time
+		int hour = clock/100;
+		int minute = clock%100;
+
+		if(++minute > 59){
+			minute = 0;
+			hour += 1;
+		}
+		if(hour > 23){
+			hour = 0;
+			day ++;
+		}
+		clock = hour * 100 + minute;
 	}
+
 	public bool check_materials(string temp_change, int temp_num){
 		if (materials.TryGetValue(temp_change, out temp_num)){
 			materials[temp_change] += temp_num;
@@ -51,12 +68,6 @@ public class PlayerState : Singleton<PlayerState> {
 		}else{
 			materials.Add(change, change_num);
 		}
-	}
-	public void update_public(){
-		publicOpinion ++;
-	}
-	public void update_violence(){
-		violence ++;
 	}
 	public void update_notes(string new_info){
 		notes.Add(new_info);

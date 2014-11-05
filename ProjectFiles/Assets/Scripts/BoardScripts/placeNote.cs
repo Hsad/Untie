@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+using SimpleJSON;
+
 public class placeNote : MonoBehaviour {
 
 
@@ -27,11 +29,9 @@ public class placeNote : MonoBehaviour {
 	bool tset,aset = false;//have the values been set yet?
 
 
-
-
-	string[] person_actions = new string[]{"bribe","assassinate","track","threaten"};
-	string[] place_actions = new string[]{"bombing","robbery","propaganda"};
-	string[] thing_actions = new string[]{"acquire","destroy","sabotage"};
+	//string[] person_actions = new string[]{"bribe","assassinate","track","threaten"};
+	//string[] place_actions = new string[]{"bomb","rob","place propaganda"};
+	//string[] thing_actions = new string[]{"acquire","destroy","sabotage"};
 
 	private List<GameObject> buttons = new List<GameObject>();
 
@@ -41,6 +41,7 @@ public class placeNote : MonoBehaviour {
 		othernote = target;
 		comrade.text = self.d.name;
 		targettext.text = target.d.name;
+
 	}
 
 	void reset(){
@@ -59,6 +60,20 @@ public class placeNote : MonoBehaviour {
 
 		tset = aset = false;
 
+		/*JSONArray options = othernote.d.node["missions"].AsArray;
+		foreach(JSONArray option in options){
+			print("post-select option: " + option.ToString());
+			if(option[0] == action){
+				selfnote.current_mission = new Mission(option[1].AsObject,othernote,time);
+				break;
+			}
+		}*/
+		selfnote.current_mission = new Mission(othernote.d.node["missions"][action],othernote,time);
+
+
+
+
+
 
 		gameObject.SetActive(false);//hide this thing
 	}
@@ -66,10 +81,10 @@ public class placeNote : MonoBehaviour {
 
 
 	public void create_action(){//make the options for the category of choice pop up
-		string category = othernote.d.type;//options are based on what kind of object the target is 
+		//string category = othernote.d.type;//options are based on what kind of object the target is 
 
 
-		string[] options = new string[0];
+		/*string[] options = new string[0];
 		if(category == "person"){
 			options = person_actions;
 		}
@@ -78,18 +93,26 @@ public class placeNote : MonoBehaviour {
 		}
 		if(category == "thing"){
 			options = thing_actions;
-		}
+		}*/
+
+
+
+		JSONArray options = othernote.d.node["missionlist"].AsArray;
 
 		RectTransform rct = buttonfab.transform as RectTransform;
 
-		for(int i=0;i<options.Length;i++){
+		int i = 0;
+		//for(int i=0;i<options.Count;i++){
+		foreach(JSONNode option in options){
+			string opt = option;
 			GameObject g = Instantiate(buttonfab) as GameObject;
 			g.transform.parent = gameObject.transform;
 			g.transform.localPosition = new Vector2(0, rct.sizeDelta.y * i);
 			Text txt = g.GetComponentInChildren<Text>();
-			txt.text = options[i];
+			txt.text = opt;//options[i];
 
 			buttons.Add(g);
+			i++;
 		}
 
 		actiontext.GetComponent<Button>().interactable = false;

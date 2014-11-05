@@ -20,8 +20,11 @@ public class IntelFolder : MonoBehaviour {
 		//start out by adding comrades to intel
 		PlayerState.Instance.intel.Add(new Dossier("AntonNovik"));
 		PlayerState.Instance.intel.Add(new Dossier("DmitryMoroz"));
-		//PlayerState.Instance.intel.Add(new Dossier("AntonNovik"));
-		//PlayerState.Instance.intel.Add(new Dossier("AntonNovik"));
+		PlayerState.Instance.intel.Add(new Dossier("IvanRudenko"));
+		PlayerState.Instance.intel.Add(new Dossier("MariaBoyko"));
+
+		//add some objective for test
+		PlayerState.Instance.intel.Add(new Dossier("Test1"));
 
 
 
@@ -32,7 +35,6 @@ public class IntelFolder : MonoBehaviour {
 
 	public void nextDossier(){//display the next dossier in the files
 		if(PlayerState.Instance.intel.Count > 0){
-			print("setting next dossier");
 			Dossier next = PlayerState.Instance.intel[((++curindex)%PlayerState.Instance.intel.Count)];
 			next.displayData(dossier);
 		}

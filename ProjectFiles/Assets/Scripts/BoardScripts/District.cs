@@ -4,9 +4,11 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class District : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler {
-
-	public HashSet<GameObject> nodes;//collection of nodes in this particular district, nodes are any kind of photograph
+	
+	public string name;
+	public List<GameObject> nodes;//collection of nodes in this particular district, nodes are any kind of photograph
 
 
 
@@ -18,7 +20,10 @@ public class District : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 	void Awake(){
 		im = gameObject.GetComponent<Image>();
 		normalColor = im.color;
-		nodes = new HashSet<GameObject>();
+		if(nodes == null){
+			nodes = new List<GameObject>();
+		}
+		name = gameObject.name;
 	}
 
 	public void OnDrop(PointerEventData data){//do this when the dragged image is dropped
@@ -29,6 +34,10 @@ public class District : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 			DragMe dm = data.pointerDrag.GetComponent<DragMe>();
 			if(dm != null && dm.icon != null){
 				nodes.Add(dm.icon);
+				dm.icon.GetComponent<IgnoreRaycast>().current_district = this;
+
+
+
 				print("added node: " + dm.icon); 
 			}
 

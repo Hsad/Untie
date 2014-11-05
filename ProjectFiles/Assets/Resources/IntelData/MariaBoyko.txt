@@ -1,0 +1,13 @@
+﻿{
+	"type": "person",
+	"comrade": 1,
+	"name": "Maria Boyko",
+    "biotext": "Name: Maria Boyko\nDOB: 05/08/1925\nResidence: UNKNOWN",
+    "details": "Background: A general of the Dryovskan army who works under the government. Deals with military missions",
+	"photo": "56inch2",
+	"prerequisites": [],
+	"inputs": [],
+	"success_vars": [],
+	"failure_vars": [],
+	"success_weights": []    
+}

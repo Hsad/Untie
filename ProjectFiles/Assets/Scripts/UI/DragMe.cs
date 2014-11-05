@@ -28,7 +28,7 @@ public class DragMe : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHa
 
 	public void OnBeginDrag(PointerEventData eventData)
 	{
-		if (canvas == null)
+		if (canvas == null || d.is_comrade)
 			return;
 
 		// We have clicked something that can be dragged.

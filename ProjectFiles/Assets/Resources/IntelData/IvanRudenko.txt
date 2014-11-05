@@ -1,0 +1,13 @@
+﻿{
+	"type": "person",
+	"comrade": 1,
+	"name": "Ivan Rudenko",
+    "biotext": "Name: Ivan Rudenko\nDOB: 15/07/1940\nResidence: UNKNOWN",
+    "details": "Background: A bureaucratic official under the Cheskovan government. Deals with supply and logistics missions",
+	"photo": "mugshot2",
+	"prerequisites": [],
+	"inputs": [],
+	"success_vars": [],
+	"failure_vars": [],
+	"success_weights": []    
+}

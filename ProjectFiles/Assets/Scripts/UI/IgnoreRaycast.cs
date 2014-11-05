@@ -4,6 +4,9 @@ using System.Collections;
 using UnityEngine.EventSystems;
 
 public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHandler, IEndDragHandler, IDragHandler {
+	public bool is_comrade = false;//if this is true, do comrade-specific things
+
+
 	public bool pinned = false;
 	public Dossier d = null;//reference to dossier
 	private Image im;//create an image
@@ -11,8 +14,17 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	public GameObject timenote;//the note with the time and instructions
 	public GameObject arrow;//arrow to give strings direction
 
+	public District current_district;
+
+	public Mission current_mission;
+
+
+
 	public string action;
 	public int time;
+
+	//hack to preload a dossier from a file
+	public string makeFile = "";
 
 
 	bool dragging = false;
@@ -25,7 +37,7 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	private Button MyButton = null; // assign in the editor
 	
 	public void pin(){
-
+		//pin the node to the bulletin board
 
 		GameObject child = new GameObject("linedraw");
 		child.AddComponent("IgnoreRaycast");
@@ -54,6 +66,8 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 			im.rectTransform.sizeDelta = new Vector2(0,30);//make string this height, width doesn't matter
 			target = null;
 			Destroy(timenote);
+			action = "";
+			time = 0;
 		}
 	}
 
@@ -65,15 +79,36 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	}
 
 
+	void Start(){
+		//this is a hacky workaround for getting the comrades in the scene
+
+		if(makeFile != ""){
+			d = new Dossier(makeFile);
+			is_comrade = d.is_comrade;
+		}
+
+		Image[] tmp = gameObject.GetComponentsInChildren<Image>();
+		foreach(Image img in tmp){
+			if(img.gameObject != gameObject){
+				im = img;
+				break;
+			}
+		}
+		transform.SetAsLastSibling();
+	}
+
+
 
 	public void OnBeginDrag(PointerEventData eventData){
 		target = null; // reset connection
 		Destroy(timenote);
-		dragging = true;
+		if(is_comrade){
+			dragging = true;
+		}	
 	}
 	
 	public void OnDrag(PointerEventData data){
-
+		if(!dragging) return;
 
 		Vector3 globalMousePos;
 		if (RectTransformUtility.ScreenPointToWorldPointInRectangle(transform as RectTransform, data.position, data.pressEventCamera, out globalMousePos)){
@@ -102,11 +137,12 @@ public class IgnoreRaycast : MonoBehaviour, ICanvasRaycastFilter, IBeginDragHand
 	}
 
 	public void OnEndDrag(PointerEventData data){
+		if(!dragging) return;
 		dragging = false;
 		GameObject tmp1 = data.pointerCurrentRaycast.go;
 		if(tmp1 == null || tmp1 == gameObject) return;
 		IgnoreRaycast tmp2 = tmp1.GetComponent<IgnoreRaycast>();
-		if(tmp2 != null && tmp2.pinned){//if the drag ends on a valid location, set target
+		if(tmp2 != null && tmp2.pinned && !tmp2.is_comrade){//if the drag ends on a valid location, set target
 			target = tmp1;
 			//timenote = Instantiate(PlayerState.Instance.noteFab,im.rectTransform.position,Quaternion.identity) as GameObject; //create note in middle of string
 			RectTransform trt = transform as RectTransform;
