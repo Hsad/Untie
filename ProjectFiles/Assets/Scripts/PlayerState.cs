@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using SimpleJSON;
 
 public class PlayerState : Singleton<PlayerState> {
 	public int publicOpinion = 0;//public opinion level
@@ -14,7 +15,10 @@ public class PlayerState : Singleton<PlayerState> {
 	public GameObject arrowFab;//see above
 
 	public placeNote notePrompt;//reference to the note writing interface
-	
+
+
+	public JSONNode tv_messages;
+	public JSONNode phone_messages;
 
 
 	
@@ -27,11 +31,24 @@ public class PlayerState : Singleton<PlayerState> {
 	public List<string> notes = new List<string>();//keeps track of extra information, each string = one page of the notebook
 
 
-	//----------------------
-	// Notes:
-	//	Dossiers should all be generated with a script by reading a JSON file or something
+
+	void Start(){
+		TextAsset f = Resources.Load("Dialogue/tv_messages") as TextAsset;
+		tv_messages = JSON.Parse(f.text);
+		f = Resources.Load("Dialogue/phone_messages") as TextAsset;
+		phone_messages = JSON.Parse(f.text);
+	}
+
+
 	public int get_time(){
 		return clock;
+	}
+
+	public void set_time(int newtime){
+		if(newtime < clock){//assume next day
+			day++;
+		}
+		clock = newtime;
 	}
 
 	public void update_time(){//increment the time

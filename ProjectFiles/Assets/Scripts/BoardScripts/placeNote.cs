@@ -81,21 +81,6 @@ public class placeNote : MonoBehaviour {
 
 
 	public void create_action(){//make the options for the category of choice pop up
-		//string category = othernote.d.type;//options are based on what kind of object the target is 
-
-
-		/*string[] options = new string[0];
-		if(category == "person"){
-			options = person_actions;
-		}
-		if(category == "place"){
-			options = place_actions;
-		}
-		if(category == "thing"){
-			options = thing_actions;
-		}*/
-
-
 
 		JSONArray options = othernote.d.node["missionlist"].AsArray;
 

@@ -8,20 +8,23 @@
 	"missionlist":["bomb"],
 	"missions":{
 		"bomb":{
-			"prerequisites":[],
+			"prerequisites":[["c4",5]],
 			"requirements":["Fabrika",1200,30],
 			"success":{
 				"violence":5,
 				"public_opinion":-1,
-				"materials":[["c4",-5]]
+				"materials":[["c4",-5]],
+				"dialogue":[["tv","part1",0],["phone","part1",0]]
 				},
 			"failure":{
 				"violence":2,
 				"public_opinion":-5,
-				"materials":[["c4",-5]]
+				"materials":[["c4",-5]],
+				"dialogue":[["tv","part1",1],["phone","part1",1]]
 			}
 		},
-		"rob":[],
-		"place propaganda":[]
+		"scout":{},
+		"rob":{},
+		"place propaganda":{}
 	}
 }
