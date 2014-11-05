@@ -4,7 +4,7 @@
 	"name": "Dmitry Moroz",
     "biotext": "Name: Dmitry Moroz\nDOB: 15/03/1914\nResidence: UNKNOWN",
     "details": "Background: Reporter popular for the people who works at the government’s news station. Idealistic young man who gets caught up the revolution’s hype and compromises an operation. Deals with information and reputation missions",
-	"photo": "mugshot1",
+	"photo": "portrait2",
 	"prerequisites": [],
 	"inputs": [],
 	"success_vars": [],

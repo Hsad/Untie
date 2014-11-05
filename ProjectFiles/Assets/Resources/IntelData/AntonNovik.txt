@@ -4,7 +4,7 @@
 	"name": "Anton Novik",
     "biotext": "Name: Anton Novik\nDOB: 21/09/1894\nResidence: UNKNOWN",
     "details": "Background: Former Prime Minister of Dryovska; was deposed and replaced by a puppet leader when Cheskova invaded 20 years ago. A Grizzled old man filled with anger who wants to retake his country and rule once more. Deals with political missions",
-	"photo": "seriouslove",
+	"photo": "portrait1",
 	"prerequisites": [],
 	"inputs": [],
 	"success_vars": [],

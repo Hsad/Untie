@@ -4,7 +4,7 @@
 	"name": "Ivan Rudenko",
     "biotext": "Name: Ivan Rudenko\nDOB: 15/07/1940\nResidence: UNKNOWN",
     "details": "Background: A bureaucratic official under the Cheskovan government. Deals with supply and logistics missions",
-	"photo": "mugshot2",
+	"photo": "portrait3",
 	"prerequisites": [],
 	"inputs": [],
 	"success_vars": [],
