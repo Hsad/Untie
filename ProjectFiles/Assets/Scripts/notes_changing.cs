@@ -10,9 +10,10 @@ public class notes_changing : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		notes = GetComponent<Text>();
-		data.Add("hiyo");
-		data.Add("boo");
-		data.Add("halloween");
+		data.Add("Notes");
+		data.Add("Notes\nboo");
+		data.Add("Notes\nhalloween");
+		notes.text = data[num_pages];
 	}
 
 	public void page_change(){ 
