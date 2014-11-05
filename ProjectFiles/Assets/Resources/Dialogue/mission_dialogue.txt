@@ -34,9 +34,9 @@
 		"You: If only there weren't any civilians nearby. AIs it really worth it Anton? The amoun of people that have been hurt are we really doing the right thing.",
 		"Anton: YOU FOOL not only did you mess up but you harmed the civilians, our great noble cause is in danger now because of you.",
 		"You:I  TOLD you there wasn't enough intel. You were the one who wanted to continue, and I ask you again Anton is it really worth the sacrifices.",
-		"Ivan: good job trakcing him we got good intel",
-		"You: It is my honor",
-		"Ivan: Guy's pretty smart to lose you so fast"
+		"Ivan: good job trakcing him we got good intel, now with all this intel we can have even less civilian casualties.",
+		"You: One can only hope that the intel can lessen the burden placed amongst out brethen.",
+		"Ivan: Guy's pretty smart to lose you so fast, but regardless we must go through the plan even with the little amount of intel we've gathered."
 	],
 	"part4":[
 		"Anton: Thank you and remember it was for a good cause, a revolution without mone is a revolution bound to fair it pains me too.",
