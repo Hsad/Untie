@@ -64,19 +64,24 @@
      <Compile Include="Assets\Scripts\UI\IntelFolder.cs" />
      <Compile Include="Assets\Scripts\UI\RaycastMask.cs" />
      <Compile Include="Assets\Scripts\data_note.cs" />
+     <Compile Include="Assets\Scripts\display_phone_story.cs" />
      <Compile Include="Assets\Scripts\notes_changing.cs" />
      <Compile Include="Assets\Scripts\phone_names_change.cs" />
-     <Compile Include="Assets\Scripts\player_slcik.cs" />
      <Compile Include="Assets\Scripts\story_script.cs" />
      <Compile Include="Assets\Scripts\television.cs" />
      <Compile Include="Assets\Scripts\timesetter.cs" />
      <None Include="Assets\Resources\IntelData\Test1.txt" />
      <None Include="Assets\Resources\IntelData\AntonNovik.txt" />
+     <None Include="Assets\Scripts\tv_1_script.txt" />
      <None Include="Assets\Resources\IntelData\IvanRudenko.txt" />
      <None Include="Assets\Scripts\story_proto.txt" />
      <None Include="Assets\Fonts\Secret-Typewriter\Cpr.Sparhelt font License.txt" />
      <None Include="Assets\Resources\IntelData\MariaBoyko.txt" />
+     <None Include="Assets\Scripts\Anton_phone.txt" />
+     <None Include="Assets\Resources\IntelData\mission_dialogue.txt" />
      <None Include="Assets\Resources\IntelData\DmitryMoroz.txt" />
+     <None Include="Assets\Scripts\phone_story_1.txt" />
+     <None Include="Assets\Scripts\extra_info.txt" />
      <None Include="Assets\Resources\IntelData\Test2.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>

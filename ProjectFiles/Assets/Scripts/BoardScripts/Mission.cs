@@ -37,16 +37,15 @@ public class Mission{
 		//determinants for success: location, time, leeway
 		//returns false if fail mission, true otherwise
 		string location = node["requirements"][0];
-		Debug.Log("location: " + location);
 		int time = int.Parse(node["requirements"][1]);
 		int leeway = int.Parse(node["requirements"][2]);
 
-		if(!(location == target.current_district.name)){
-			Debug.Log("failed mission because wrong location");
+		if(!(location == target.current_district.dname)){
+			//Debug.Log("failed mission because wrong location");
 			return false;
 		}
 		if(Mathf.Abs(time - missiontime) > leeway){
-			Debug.Log("failed mission because wrong time");
+			//Debug.Log("failed mission because wrong time");
 			return false;
 		}
 		return true;
@@ -56,10 +55,6 @@ public class Mission{
 		//and modify the rest of the program
 		if(check_prereqs()){
 			string result = check_success() ? "success" : "failure";
-
-			Debug.Log("mission result: " + result);
-
-
 			PlayerState.Instance.violence += node[result]["violence"].AsInt;
 			PlayerState.Instance.publicOpinion += node[result]["public_opinion"].AsInt;
 			foreach (JSONArray pair in node[result]["materials"].AsArray){//update materials based on success
