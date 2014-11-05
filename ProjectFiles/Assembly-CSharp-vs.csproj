@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\PlayerState.cs" />
      <Compile Include="Assets\Scripts\SimpleJSON.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
+     <Compile Include="Assets\Scripts\UI\DialogueQueue.cs" />
      <Compile Include="Assets\Scripts\UI\DragMe.cs" />
      <Compile Include="Assets\Scripts\UI\IgnoreRaycast.cs" />
      <Compile Include="Assets\Scripts\UI\IntelFolder.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Scripts\story_script.cs" />
      <Compile Include="Assets\Scripts\television.cs" />
      <Compile Include="Assets\Scripts\timesetter.cs" />
+     <Compile Include="Assets\Scripts\tvScreen.cs" />
      <None Include="Assets\Resources\IntelData\Test1.txt" />
      <None Include="Assets\Resources\IntelData\AntonNovik.txt" />
      <None Include="Assets\Scripts\tv_1_script.txt" />
@@ -78,11 +80,10 @@
      <None Include="Assets\Fonts\Secret-Typewriter\Cpr.Sparhelt font License.txt" />
      <None Include="Assets\Resources\IntelData\MariaBoyko.txt" />
      <None Include="Assets\Scripts\Anton_phone.txt" />
-     <None Include="Assets\Resources\IntelData\mission_dialogue.txt" />
+     <None Include="Assets\Resources\Dialogue\mission_dialogue.txt" />
      <None Include="Assets\Resources\IntelData\DmitryMoroz.txt" />
      <None Include="Assets\Scripts\phone_story_1.txt" />
      <None Include="Assets\Scripts\extra_info.txt" />
-     <None Include="Assets\Resources\IntelData\Test2.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
