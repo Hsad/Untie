@@ -1,0 +1,105 @@
+{
+	"Aquire":{
+		"title":"Fundraising Mission",
+		"prerequisites":["blog", "Defacement"],
+		"description":"Obtain supplies from friendly sources to bolster our forces. Not available if both Blog mission and Defacement mission were failed.",
+		"conversation":["Ivan: Good, you’re here. I’ve finished analyzing our resources, and we’ll definitely require more for our efforts to be a success. The general will gather munitions for us, but I want you to acquire provisions. Search through the districts for friendly individuals and gather their aid.",
+			"You: Of course. Though Ivan, I’ve noticed something about you.”,
+			"Ivan: And what is that?”,
+			"You: You’ve never said any words such as revolution or rebellion, or acknowledged that there will be fighting at some point. Are you sure you have the resolve for this?",
+			"Ivan: Do not question my will simply because I do not thirst for blood. The kind of man who exalts at death and destruction is no man at all. And thus I ask you, who sits in that room for every day. Are you ready to take life and lose your own?"
+		],
+		"success":{
+			"violence":-1,
+			"public_opinion":5,
+			"materials":[]
+		},
+		"failure":{
+			"violence":-3,
+			"public_opinion":-3,
+			"materials":[]
+		},
+		"end":[
+			"You: I’ve compiled the sources. Expect them within the day.”,
+			"Ivan: Good. Before making an army, you must feed an army. Take care, comrade.”
+		]
+	},
+	"Robbery":{
+		"title":"Resource Theft",
+		"prerequisites":["!blog", "!Defacement"],
+		"description":"Collect a dossier of targets for robbing",
+		"conversation":["Ivan: You’re here at last. After going over our supplies, we’ll need to acquire more in order for our endeavor to succeed. However, I’m not sure we’ve got the good graces with the populace needed to get everything we need from them, so we’ll need to resort to more… unorthodox… methods.",
+			"You: “Do you mean theft?”,
+			"Ivan: Don’t sound so offended. Every action we take is illegal as long as we work toward this goal. At any rate, necessities are necessities; I’ll need a list of valid targets for resource-gathering as soon as possible.”,
+			"You: For someone so resigned to his actions, you certainly don’t sound like it. You haven’t said the name of a single one of these “illegal” actions we’re doing.",
+			"Ivan: Don’t question my resolve, Squatter. I made up my mind long ago, and I stick to my words.”
+		],
+		"success":{
+			"violence":0,
+			"public_opinion":-2,
+			"materials":[]
+		},
+		"failure":{
+			"violence":-1,
+			"public_opinion":-10,
+			"materials":[]
+		},
+		"end":["You: I’ve finished the list, Ivan. I’m sending it now.”,
+				"Ivan: “Good. This is for the sake of our endeavor; remember that.”
+		]
+	},
+	"Propaganda":{
+		"title": "Protest",
+		"prerequisites":[],
+		"conversation":["Dmitry: Ah, comrade! I’m planning a protest to garner more attention and support from the people of Dryovska, but I need a good location for it. Do you think you could find one for me?”,
+			"You: “Of course. This protest will help prove we mean to stand by our words.”,
+			"Dmitry: I knew I could count on you! Still, we’ve been getting a fair amount of attention on the Internet thanks to my efforts; it’s amazing knowing that there are so many people listening to me!”,
+			"You: “Is that really why you joined? To gain attention?”,
+			"Dmitry: “What? Of course not! But you can’t deny it’s a heady sensation! Look, I’m as devoted to the revolution as you are, so hurry up and do your job!”
+		],
+		"success":{
+			"violence":0,
+			"public_opinion":0,
+			"materials":[]
+		},
+		"failure":{
+			"violence":-10,
+			"public_opinion":-10,
+			"materials":["game over"]
+		},
+		"end":[
+			"You: “Dmitry, I’ve found a suitable location for a protest.”,
+			"Dmitry: Excellent! I’ll have our comrades move into position as soon as possible!”,
+			"You: “Make sure to be careful, Dmitry. This is a matter of life and death.”,
+			"Dmitry: Don’t worry about me; I’m no fool.”
+		]
+	},
+	"Bombing":{
+		"title":"bombing",
+		"description":"Bomb key locations to damage the Cheskovan government and show the resolve of the Light of Dryovska",
+		"conversation": ["Anton: “Finally, you’re here. It’s time we showed those swine infesting Dryovska our resolve. Pinpoint key locations of the Cheskovan regime and plant explosives. We’ll chip away their defenses here; once the time comes, we’ll eradicate them like the rot they are.”,
+			"You: “Bombing…won’t we cause collateral damage with that?”,
+			"Anton: “This is war, comrade. From the moment Cheskova invaded our land, they should have prepared themselves for death!",
+			"You: “If that’s what it takes to free our country… but what about Dryovskans near the targets?”,
+			"Anton: It’s your job to ensure there aren’t any. I want a full report by the end of the week.”,
+			"You: “Yes, sir."
+		],
+		"success":{
+			"violence":5,
+			"public_opinion":5,
+			"materials":[]
+		},
+		"failure":{
+			"violence":-10,
+			"public_opinion":-10,
+			"materials":["game over"]
+		},
+		"end":[
+			"You: “The list is complete, Anton.”,
+			"Anton: “Much appreciated. Ah, don’t hang up yet.”,
+			"You: “What is it, sir?”,
+			"Anton: “Call me by my stolen title again, just for old times’ sake.”,
+			"You: “Yes, Prime Minister."
+		]
+	}
+}
