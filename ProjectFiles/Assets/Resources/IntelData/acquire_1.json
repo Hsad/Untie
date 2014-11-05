@@ -1,0 +1,21 @@
+{
+	"Acquire":{
+		"title":"Vehicles",
+		"prerequisites":[],
+		"requirements":["Skladista",0200,10],
+		"success":{
+			"violence":2,
+			"public_opinion":1,
+			"materials":[["cars",1],["guns",1]],
+			"dialogue":[["mission","part2",0],["mission","part2",1]],
+			"intel":["propaganda_2","Threaten_1"]
+		},
+		"failure":{
+			"violence":-4,
+			"public_opinion":-2,
+			"materials":[],
+			"dialogue":[["mission","part2",2]],
+			"intel":["propaganda_2"]
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"Scout":{
+		"title":"scout parameters",
+		"prerequisites":[["car",1]],
+		"requirements":["Prodavnis",2000,10],
+		"success":{
+			"violence":0,
+			"public_opinion":0,
+			"materials":[["money",200]],
+			"dialogue":[["mission","part2",8]],
+			"intel":["Destroy2"]
+		},
+		"failure":{
+			"violence":0,
+			"public_opinion":-2,
+			"materials":[],
+			"dialogue":[["mission","part2",9]],
+			"intel":["Destroy2"]
+		}
+	}
+}

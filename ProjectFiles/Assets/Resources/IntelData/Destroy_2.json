@@ -1,0 +1,21 @@
+{
+	"Destroy":{
+		"title":"vandelism",
+		"prerequisites":[["car",1]],
+		"requirements":["Kuci",1000,10],
+		"success":{
+			"violence":0,
+			"public_opinion":1,
+			"materials":[],
+			"dialogue":[["mission","part2",11]],
+			"intel":["acquire1","acquire2"]
+		},
+		"failure":{
+			"violence":0,
+			"public_opinion":-2,
+			"materials":[],
+			"dialogue":[["mission","part2",12]],
+			"intel":["acquire1"]
+		}
+	}
+}
