@@ -1,14 +1,7 @@
 {
 	"propaganda":{
 		"title":"blog",
-		"conversation":["Dmitry:The first step is not to get the public on our side. The first step is to inform the public we have a side! I’ve set up several anonymous blogs to disseminate the truth about Cheskova and the need for rebellion, but I need a subject to write about first! I want you to find some pressing issues in the capital of Dryovska that’ll really make the people’s blood boil!",
-			"You: Understood. The people need to know about the crimes of Cheskova.”,
-			"Dmitry: I’m glad you share my passion. Still, isn’t this exciting! We are at the forefront of history, comrade!”
-		],
-		"television":[["Zhilye District":"The Cheskovan government continues to deny allegations made by the group known as the Light of Dryovska that the real estate program for the destitute Zhilye District is corrupt…","Seafood on sale for the next month at The Mighty Ivan’s! Come to Dok District for great deals - we aren’t shellfish!"],
-		["Movie":"Sales for Cheskova: A Tale of Triumph have plummeted since the scathing review published by the Light of Dryovska, a mysterious group that…","Seafood on sale for the next month at The Mighty Ivan’s! Come to Dok District for great deals - we aren’t shellfish!"],
-		["Mighty Ivan’s":"In an unwarranted attack on local businessman Ivan Dvorak, the inflammatory group known as the Light of Dryovska gave a bile-filled review to his humble restaurant. We speak with Mr. Dvorak later at 7."]
-		],
+		"requirements":[],
 		"success":{
 			"violence":0,
 			"public_opinion":5,
@@ -19,41 +12,5 @@
 			"public_opinion":2,
 			"materials":[]
 		}
-
-
-	},
-	"Sabotage":{
-		"title": "defacement",
-		"conversation":["You: The list is complete.","Anton: Good. I’ll send the targets to some men immediately.","Seafood on sale for the next month at The Mighty Ivan’s! Come to Dok District for great deals - we aren’t shellfish!"],
-		"television":[["alexis defaced" , "The home of Alexei Nazar, head of the Financial Allocation department and creator of the seafood tax was vandalized with various accusations and slurs. The group responsible calls itself the Light of Dryovska, and…","Seafood on sale for the next month at The Mighty Ivan’s! Come to Dok District for great deals - we aren’t shellfish!"],
-		["orphanage","The Vasily Kreuchev Orphanage, an inspiring facility for the care of abandoned children, was attacked by a horrific act of vandalism by a collection of thugs calling themselves the Light of Dryovska…","Seafood on sale for the next month at The Mighty Ivan’s! Come to Dok District for great deals - we aren’t shellfish!"],
-		["park", "Not even 24 hours after its commencement ceremony, the Nikolai Petresken Memorial Park was vandalized; the statue of the Cheskovan leader Nikolai Petresken suffered particular damage. Graffiti at the sign identifies the damage as the handiwork of a group called the Light of Dryovska.","Seafood on sale for the next month at The Mighty Ivan’s! Come to Dok District for great deals - we aren’t shellfish!"] ]
-	},
-	"television":{[“Repairs were recently completed to the main street of Prodavnis District, allowing for delivery trucks to once again deliver goods to the area…”,
-	 “…er plant in the Fabrika district is experiencing maintenance, so expect routine fluctuations in service for the next few weeks…”,
-	 “…er plant in the Fabrika district is experiencing maintenance, so expect routine fluctuations in service for the next few weeks…”,
-	 “The Boyko family…a clan of distinguished military service. Maria Boyko, an eminent general of Cheskova despite her Dryovskan roots and her son Piotr, a rapidly rising Sergeant in the army. The report continues after these messages…”,
-	 “In a stunning act of charity, concerned CEOs from Novac District have donated 20% of their profits to the Vasily Kreuchev Orphanage! The generosity of the successful in this country is truly without bounds!”,
-	 “Regulated temperature storage containers were successfully implemented in Skladista District a week ago, allowing for preservation of nonseasonal food! Make sure to enjoy the mangoes in your local stores and restaurants!”]},
-	"phone":{
-		"(F,R)":"Various elderly people have reported victimization by extortion from Cheskovan policemen. The incidents have taken place primarily in Stambeni District.",
-		"(B)":"We’ve received word of a munitions factory in…I believe Vojni District. It appears to be a sizable producer of firearms and ammunition.",
-		"(-R)":"The Cheskovan government is holding a gala tomorrow for own of their own in Vlada district! We can swoop in and take the catering from right under their noses! ",
-		"(F)" :"There are sympathizers of the Light of Dryovska in the junkyard in the Skladista district. We should be able to obtain supplies from them.",
-		"(-P)":"I’ve mapped the streets in Vlada District. There are some tight curves, but we chould be able to successfully march along it.",
-		"(-B)":"Multiple soldiers have been spotted near a chemical plant in Fabrika District. They may be manufacturing a chemical weapon.",
-		"(P,B)":"General Boyko speaking. I’ll be leading the majority of the military on a practice march in Polis District. Use the opportunity as you see fit.",
-		"(B)":"I haven’t been able to confirm this, but the Cheskovan Embassy has most of its security on parade on the 15th.",
-	},
-	"success":{
-		"violence":0,
-		"public_opinion":5,
-		"materials":[]
-	},
-	"failure":{
-		"violence":0,
-		"public_opinion":-1,
-		"materials":[]
 	}
-
 }

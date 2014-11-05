@@ -1,0 +1,23 @@
+{
+	"Robbery":{
+		"title":"attack military",
+		"prerequisites":["guns",5],
+		"requirements":["Dok",1500,5],
+		"success":{
+			"violence":3,
+			"public_opinion":4,
+			"materials":[["money",1000],["guns",15]],
+			"dialogue":[["mission","part4",0],["mission","part4",1]],
+			"intel":["Bombing_1", "Protest_1"]
+
+		},
+		"failure":{
+			"violence":-2,
+			"public_opinion":-4,
+			"materials":[["guns",3]],
+			"dialogue":[["mission","part4",2]],
+			"intel":["Bombing_1"]
+
+		}
+	}
+}
