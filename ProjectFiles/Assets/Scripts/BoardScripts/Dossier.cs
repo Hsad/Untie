@@ -2,12 +2,15 @@
 using System.Collections;
 using UnityEngine.UI;
 using SimpleJSON;
-
-public class Dossier{
+[System.Serializable]
+public class Dossier: System.Object{
 
 	//visual data
 	public Sprite photo;
 	public string biotext, details;
+	public bool is_comrade = false;
+	public JSONNode node;
+
 
 	//intel values
 	public string name,type, prerequisites, inputs, success_vars, failure_vars,success_weights;
@@ -38,18 +41,20 @@ public class Dossier{
 	public void fromFile(string filename){//set the variables for this document from a file
 		TextAsset f = Resources.Load("IntelData/" + filename) as TextAsset;
 		if(f != null){
-			JSONNode node = JSON.Parse(f.text);
-			type = node["type"];
-			prerequisites = node["prerequisites"];
-			inputs = node["inputs"];
-			success_vars = node["success_vars"];
-			failure_vars = node["failure_vars"];
-			success_weights = node["success_weights"];
+			node = JSON.Parse(f.text);
 
+			//prerequisites = node["prerequisites"];
+			//inputs = node["inputs"];
+			//success_vars = node["success_vars"];
+			//failure_vars = node["failure_vars"];
+			//success_weights = node["success_weights"];
+
+			type = node["type"];
 			photo = Resources.Load<Sprite>("Photos/" + node["photo"]);
 			biotext = node["biotext"];
 			details = node["details"];
 			name = node["name"];
+			is_comrade = node["comrade"].AsBool;
 		}else{
 			Debug.Log("Invalid file: " + filename);
 		}
