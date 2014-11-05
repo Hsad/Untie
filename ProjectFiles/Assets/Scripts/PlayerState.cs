@@ -20,6 +20,8 @@ public class PlayerState : Singleton<PlayerState> {
 	public JSONNode tv_messages;
 	public JSONNode phone_messages;
 
+	public DialogueQueue dq;
+
 
 	
 	public Dictionary<string,int> materials = new Dictionary<string, int>();//table of each material and the quantity acquired
@@ -37,6 +39,8 @@ public class PlayerState : Singleton<PlayerState> {
 		tv_messages = JSON.Parse(f.text);
 		f = Resources.Load("Dialogue/phone_messages") as TextAsset;
 		phone_messages = JSON.Parse(f.text);
+
+		print(phone_messages["part1"][0]);
 	}
 
 

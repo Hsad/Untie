@@ -62,6 +62,32 @@ public class Mission{
 				int qty = int.Parse(pair[1]);
 				PlayerState.Instance.update_materials(material, qty);//remove the materials from the materials log
 			}
+
+			foreach (JSONArray pair in node[result]["dialogue"].AsArray){//update materials based on success
+				string medium = pair[0];
+				string act = pair[1];
+				int index = int.Parse(pair[2]);
+
+				string dialogue = "";
+				if(medium == "tv"){
+					dialogue = PlayerState.Instance.tv_messages[act][index];
+					PlayerState.Instance.dq.add_dialogue(dialogue);
+				}
+				else if(medium == "phone"){
+					dialogue = PlayerState.Instance.phone_messages[act][index];
+					PlayerState.Instance.dq.add_dialogue(dialogue);
+				}
+			}
+
+			foreach (JSONNode item in node[result]["intel"].AsArray){//add new intel
+				string filename = item;
+				PlayerState.Instance.intel.Add(new Dossier(filename));
+			}
+
+
+
+
+
 			return true;
 		}
 		return false;

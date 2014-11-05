@@ -17,6 +17,11 @@ public class DialogueQueue : MonoBehaviour {
 		txt = GetComponentInChildren<Text>();
 	}
 
+	public void add_dialogue(string str){
+		dialogue.Enqueue(str);
+		next_chunk();
+	}
+
 
 	public void next_chunk(){//get the next chunk of dialogue
 		if(curindex >= words){//if all words are rendered, get next thing from list

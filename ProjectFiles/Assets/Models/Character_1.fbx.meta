@@ -1,0 +1,362 @@
+fileFormatVersion: 2
+guid: 89ea554e8d4b0644baeeef943c2b61a9
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Body_Geom
+    100002: Bottom_Lip_Joint
+    100004: //RootNode
+    100006: CTRL
+    100008: GEOM
+    100010: Hat_Geom
+    100012: Head_Control
+    100014: Head_Joint
+    100016: IK
+    100018: Left_Ankle_Joint
+    100020: Left_Elbow_Control
+    100022: Left_Elbow_Joint
+    100024: Left_Eye_Control
+    100026: Left_Eye_Geom
+    100028: Left_Eye_Joint
+    100030: Left_Eyebrow_1
+    100032: Left_Eyebrow_2
+    100034: Left_Eyebrow_3
+    100036: Left_Eyebrow_Control_1
+    100038: Left_Eyebrow_Control_2
+    100040: Left_Eyebrow_Control_3
+    100042: Left_Foot_Joint
+    100044: Left_Hip_Joint
+    100046: Left_Knee_Joint
+    100048: Left_Left_IK
+    100050: Left_Leg_IK_Control
+    100052: Left_Shoulder_Control
+    100054: Left_Shoulder_Joint
+    100056: Left_Toe_Joint
+    100058: Left_Wrist_Control
+    100060: Left_Wrist_Joint
+    100062: Lower_Lip_Control
+    100064: LowerSpine_Control
+    100066: LowerSpine_Joint
+    100068: Master_Control
+    100070: Neck_Control
+    100072: Neck_Joint
+    100074: Right_Ankle_Joint
+    100076: Right_Elbow_Control
+    100078: Right_Elbow_Joint
+    100080: Right_Eye_Control
+    100082: Right_Eye_Geom
+    100084: Right_Eye_Joint
+    100086: Right_Eyebrow_1
+    100088: Right_Eyebrow_2
+    100090: Right_Eyebrow_3
+    100092: Right_Eyebrow_Control_1
+    100094: Right_Eyebrow_Control_2
+    100096: Right_Eyebrow_Control_3
+    100098: Right_Foot_Joint
+    100100: Right_Hip_Joint
+    100102: Right_Knee_Joint
+    100104: Right_Leg_IK
+    100106: Right_Leg_IK_Control
+    100108: Right_Shoulder_Control
+    100110: Right_Shoulder_Joint
+    100112: Right_Toe_Joint
+    100114: Right_Wrist_Control
+    100116: Right_Wrist_Joint
+    100118: Root_Control
+    100120: Root_Joint
+    100122: SKELE
+    100124: Top_Lip_Joint
+    100126: Upper_Lip_Control
+    100128: Upperspine_Control
+    100130: UpperSpine_Joint
+    400000: Body_Geom
+    400002: Bottom_Lip_Joint
+    400004: //RootNode
+    400006: CTRL
+    400008: GEOM
+    400010: Hat_Geom
+    400012: Head_Control
+    400014: Head_Joint
+    400016: IK
+    400018: Left_Ankle_Joint
+    400020: Left_Elbow_Control
+    400022: Left_Elbow_Joint
+    400024: Left_Eye_Control
+    400026: Left_Eye_Geom
+    400028: Left_Eye_Joint
+    400030: Left_Eyebrow_1
+    400032: Left_Eyebrow_2
+    400034: Left_Eyebrow_3
+    400036: Left_Eyebrow_Control_1
+    400038: Left_Eyebrow_Control_2
+    400040: Left_Eyebrow_Control_3
+    400042: Left_Foot_Joint
+    400044: Left_Hip_Joint
+    400046: Left_Knee_Joint
+    400048: Left_Left_IK
+    400050: Left_Leg_IK_Control
+    400052: Left_Shoulder_Control
+    400054: Left_Shoulder_Joint
+    400056: Left_Toe_Joint
+    400058: Left_Wrist_Control
+    400060: Left_Wrist_Joint
+    400062: Lower_Lip_Control
+    400064: LowerSpine_Control
+    400066: LowerSpine_Joint
+    400068: Master_Control
+    400070: Neck_Control
+    400072: Neck_Joint
+    400074: Right_Ankle_Joint
+    400076: Right_Elbow_Control
+    400078: Right_Elbow_Joint
+    400080: Right_Eye_Control
+    400082: Right_Eye_Geom
+    400084: Right_Eye_Joint
+    400086: Right_Eyebrow_1
+    400088: Right_Eyebrow_2
+    400090: Right_Eyebrow_3
+    400092: Right_Eyebrow_Control_1
+    400094: Right_Eyebrow_Control_2
+    400096: Right_Eyebrow_Control_3
+    400098: Right_Foot_Joint
+    400100: Right_Hip_Joint
+    400102: Right_Knee_Joint
+    400104: Right_Leg_IK
+    400106: Right_Leg_IK_Control
+    400108: Right_Shoulder_Control
+    400110: Right_Shoulder_Joint
+    400112: Right_Toe_Joint
+    400114: Right_Wrist_Control
+    400116: Right_Wrist_Joint
+    400118: Root_Control
+    400120: Root_Joint
+    400122: SKELE
+    400124: Top_Lip_Joint
+    400126: Upper_Lip_Control
+    400128: Upperspine_Control
+    400130: UpperSpine_Joint
+    2300000: Hat_Geom
+    2300002: Left_Eye_Geom
+    2300004: Right_Eye_Geom
+    3300000: Hat_Geom
+    3300002: Left_Eye_Geom
+    3300004: Right_Eye_Geom
+    4300000: Body_Geom
+    4300002: Hat_Geom
+    4300004: Left_Eye_Geom
+    4300006: Right_Eye_Geom
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body_Geom
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: CTRL
+        weight: 1
+      - path: CTRL/Master_Control
+        weight: 1
+      - path: CTRL/Master_Control/Left_Leg_IK_Control
+        weight: 1
+      - path: CTRL/Master_Control/Right_Leg_IK_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Left_Shoulder_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Left_Shoulder_Control/Left_Elbow_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Left_Shoulder_Control/Left_Elbow_Control/Left_Wrist_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Left_Eye_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Left_Eyebrow_Control_1
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Left_Eyebrow_Control_2
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Left_Eyebrow_Control_3
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Lower_Lip_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Right_Eye_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Right_Eyebrow_Control_1
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Right_Eyebrow_Control_2
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Right_Eyebrow_Control_3
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Neck_Control/Head_Control/Upper_Lip_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Right_Shoulder_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Right_Shoulder_Control/Right_Elbow_Control
+        weight: 1
+      - path: CTRL/Master_Control/Root_Control/LowerSpine_Control/Upperspine_Control/Right_Shoulder_Control/Right_Elbow_Control/Right_Wrist_Control
+        weight: 1
+      - path: GEOM
+        weight: 1
+      - path: GEOM/Body_Geom
+        weight: 1
+      - path: GEOM/Hat_Geom
+        weight: 1
+      - path: GEOM/Left_Eye_Geom
+        weight: 1
+      - path: GEOM/Right_Eye_Geom
+        weight: 1
+      - path: IK
+        weight: 1
+      - path: IK/Left_Left_IK
+        weight: 1
+      - path: IK/Right_Leg_IK
+        weight: 1
+      - path: SKELE
+        weight: 1
+      - path: SKELE/Root_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Left_Hip_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Left_Hip_Joint/Left_Knee_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Left_Hip_Joint/Left_Knee_Joint/Left_Ankle_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Left_Hip_Joint/Left_Knee_Joint/Left_Ankle_Joint/Left_Foot_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Left_Hip_Joint/Left_Knee_Joint/Left_Ankle_Joint/Left_Foot_Joint/Left_Toe_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Left_Shoulder_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Left_Shoulder_Joint/Left_Elbow_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Left_Shoulder_Joint/Left_Elbow_Joint/Left_Wrist_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Bottom_Lip_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Left_Eye_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Left_Eyebrow_1
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Left_Eyebrow_2
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Left_Eyebrow_3
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Right_Eye_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Right_Eyebrow_1
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Right_Eyebrow_2
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Right_Eyebrow_3
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Neck_Joint/Head_Joint/Top_Lip_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Right_Shoulder_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Right_Shoulder_Joint/Right_Elbow_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/LowerSpine_Joint/UpperSpine_Joint/Right_Shoulder_Joint/Right_Elbow_Joint/Right_Wrist_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Right_Hip_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Right_Hip_Joint/Right_Knee_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Right_Hip_Joint/Right_Knee_Joint/Right_Ankle_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Right_Hip_Joint/Right_Knee_Joint/Right_Ankle_Joint/Right_Foot_Joint
+        weight: 1
+      - path: SKELE/Root_Joint/Right_Hip_Joint/Right_Knee_Joint/Right_Ankle_Joint/Right_Foot_Joint/Right_Toe_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

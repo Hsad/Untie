@@ -52,6 +52,8 @@ public class BulletinBoard : MonoBehaviour {
 			//execute the mission
 			PlayerState.Instance.set_time(irc.time);
 
+			irc.current_mission.run();//run the mission
+
 			//set comrade's new location to that of mission
 			irc.gameObject.transform.localPosition = irc.target.transform.localPosition;
 
