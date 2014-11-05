@@ -2,11 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.IO;
 //using UnityEngine.EventSystems;
 public class Phone : MonoBehaviour {
-	private bool clicked = false;
-	private bool inside = false;
 	private List<Numbers> book;
+	private List<string> anton_intel;
 	private int page_number = 1;
 	private int max_page = 2;
 	public class Numbers{
@@ -34,10 +34,14 @@ public class Phone : MonoBehaviour {
 	void Start () {
 		//create the list of button names
 		book = new List<Numbers>();
+		anton_intel = new List<string>();
 		//adding the button names
-		var temp = new Numbers("Button",1);
+		var temp = new Numbers("anton",1);
+		if ( temp == null){
+			print ("failed");
+		}
 		book.Add(temp);
-		var temp2 = new Numbers("Button2",1);
+		var temp2 = new Numbers("extra",1);
 		book.Add (temp2);
 		var temp3 = new Numbers("next_button",-1);
 		book.Add (temp3);
@@ -46,6 +50,14 @@ public class Phone : MonoBehaviour {
 		var temp5 = new Numbers("Prev_button", -2);
 		book.Add(temp5);
 
+		//creating the text/ phone story clips
+		var sr = new StreamReader(Application.dataPath +"/scripts/anton_phone.txt");
+		var contents = sr.ReadToEnd();
+		var lines = contents.Split("\n"[0]);
+		int temp8 = 0;
+		for ( temp8 = 0 ; temp8 < lines.Length ; temp8 ++){
+			anton_intel.Add(lines[temp8]);
+		}
 	}
 	void disable_buttons(string ignore){
 		//Iterating through all the buttons and disabling them
@@ -58,7 +70,6 @@ public class Phone : MonoBehaviour {
 			//find the button and if it exist
 			//disable it
 			var obj = temp.get_button();
-			print ("disabled " + temp.get_title());
 			if (obj){
 				obj.SetActive(false);
 			}
@@ -97,13 +108,19 @@ public class Phone : MonoBehaviour {
 	public void mouse(){
 		print ("yes");
 	}
-	public void call_jacob(){
-		disable_buttons("button");
-		print ("calling..");
-		//play video clip
-
+	public void call_anton(){
+		disable_buttons("anton");
+		display_phone_story display_info = new display_phone_story();
+		if (display_info == null){
+			print ("fuck this shit");
+		}
+		//display_info.news(anton_intel[0]);
+		//print ("made it ");
 		//open buttons up again
 		reactivate_buttons();
+	}
+	public void call_extra(){
+		disable_buttons("extra");
 	}
 	public void call_next(){
 		if ( page_number < max_page ){
