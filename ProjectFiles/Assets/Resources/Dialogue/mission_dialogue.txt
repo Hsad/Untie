@@ -17,10 +17,10 @@
 		"Ivan: Good. Before making an army, you must feed an army. Take care, comrade.”
 		"Ivan: If this is the extent of your abilities, I have overestimated you",
 		"You: Sorry sir this will never happen again",
-		"Ivan: Great work we now have a great power on our side",
-		"You: Thank you",
-		"Ivan: That much money and he still didn't join that greedy pig",
-		"Ivan: Thanks you got some good intel",
+		"Ivan: Great work we now have a great power on our side. Alas it shows us how greedy and foolish this government is to be so easilty bribed.",
+		"You: Thank you, it wasn't much the man was always a greedy little guy.",
+		"Ivan: That much money and he still didn't join that greedy pig, and I thought we had enough money to get him on our side.",
+		"Ivan: Thanks you got some good intel, Let's hope this can help us and protect the civilians.",
 		"Ivan: No Intel? This makes it harder",
 		"Ivan: Good work on the raid",
 		"Anton: We lost too many and gained too few"
