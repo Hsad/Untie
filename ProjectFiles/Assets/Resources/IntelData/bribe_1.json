@@ -1,21 +1,30 @@
 {
-	"Bribe":{
-		"title":"political",
-		"prerequisites":[["money",1000]],
-		"requirements":["Zhilye",1000,30],
-		"success":{
-			"violence":0,
-			"public_opinion":20,
-			"materials":[],
-			"dialogue":[["mission","part2",6],["mission","part2",7]],
-			"intel":["Track_1","Destroy_1"]
-		},
-		"failure":{
-			"violence":0,
-			"public_opinion":-10,
-			"materials":[],
-			"dialogue":[["mission","part2",8]],
-			"intel":["Track_1"]
+	"type": "person",
+	"name": "Zevanoy Poshkinu",
+    "biotext": "",
+    "details": "Background: A government official accused of corrupt tax practices.",
+	"photo": "mugshot2",
+
+	"missionlist":["bribe"],
+	"missions":{
+		"bribe":{
+			"title":"political",
+			"prerequisites":[["money",1000]],
+			"requirements":["Zhilye",1000,30],
+			"success":{
+				"violence":0,
+				"public_opinion":20,
+				"materials":[],
+				"dialogue":[["mission","part2",6],["mission","part2",7]],
+				"intel":["Track_1","Destroy_1"]
+			},
+			"failure":{
+				"violence":0,
+				"public_opinion":-10,
+				"materials":[],
+				"dialogue":[["mission","part2",8]],
+				"intel":["Track_1"]
+			}
 		}
 	}
 }

@@ -1,21 +1,30 @@
 {
-	"Destroy":{
-		"title":"Raid",
-		"prerequisites":[["guns", 10], ["c4",10],["car",2]],
-		"requirements":["Polis",1000,10],
-		"success":{
-			"violence":4,
-			"public_opinion":8,
-			"materials":[["money", 1000],["guns", 20], ["c4",15]],
-			"dialogue":[["mission","part1",9],["mission","part1",10]],
-			"intel":["Scout_1", "Destroy_2"]
-		},
-		"failure":{
-			"violence":40,
-			"public_opinion":-30,
-			"materials":[],
-			"dialogue":[["mission","part1",11],
-			"intel":["Scout_1"]
+	"type": "place",
+	"name": "Kasparov Station",
+    "biotext": "Location: 164 Muto Lane",
+    "details": "Background: The central station of Polis. Rumor has it that guns are held there. .",
+	"photo": "objective1",
+
+	"missionlist":["destroy"],
+	"missions":{
+		"destroy":{
+			"title":"Raid",
+			"prerequisites":[["guns", 10], ["c4",10],["car",2]],
+			"requirements":["Polis",1000,10],
+			"success":{
+				"violence":4,
+				"public_opinion":8,
+				"materials":[["money", 1000],["guns", 20], ["c4",15]],
+				"dialogue":[["mission","part1",9],["mission","part1",10]],
+				"intel":["Scout_1", "Destroy_2"]
+			},
+			"failure":{
+				"violence":40,
+				"public_opinion":-30,
+				"materials":[],
+				"dialogue":[["mission","part1",11],
+				"intel":["Scout_1"]
+			}
 		}
 	}
 }

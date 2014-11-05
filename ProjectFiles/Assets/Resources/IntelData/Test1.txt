@@ -15,22 +15,14 @@
 				"public_opinion":-1,
 				"materials":[["c4",-5]],
 				"dialogue":[["tv","part1",0],["phone","part1",0]],
-<<<<<<< HEAD
 				"intel":["Test1"]
-=======
-				"intel":[]
->>>>>>> 5c9b1a5b251d0c7c95ccee751dded34c9007cc87
 				},
 			"failure":{
 				"violence":2,
 				"public_opinion":-5,
 				"materials":[["c4",-5]],
 				"dialogue":[["tv","part1",1],["phone","part1",1]],
-<<<<<<< HEAD
 				"intel":["Test1"]
-=======
-				"intel": []
->>>>>>> 5c9b1a5b251d0c7c95ccee751dded34c9007cc87
 			}
 		},
 		"scout":{},

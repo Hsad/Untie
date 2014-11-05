@@ -26,7 +26,7 @@ public class IntelFolder : MonoBehaviour {
 		PlayerState.Instance.intel.Add(new Dossier("MariaBoyko"));
 
 		//add some objective for test
-		PlayerState.Instance.intel.Add(new Dossier("Test1"));
+		PlayerState.Instance.intel.Add(new Dossier("Threaten_1"));
 
 
 

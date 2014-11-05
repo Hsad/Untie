@@ -55,8 +55,15 @@ public class Mission{
 		//and modify the rest of the program
 		if(check_prereqs()){
 			string result = check_success() ? "success" : "failure";
+
+			Debug.Log("mission result: " + result);
+
 			PlayerState.Instance.violence += node[result]["violence"].AsInt;
 			PlayerState.Instance.publicOpinion += node[result]["public_opinion"].AsInt;
+
+			Debug.Log ("node: " + node[result].ToString());
+
+
 			foreach (JSONArray pair in node[result]["materials"].AsArray){//update materials based on success
 				string material = pair[0];
 				int qty = int.Parse(pair[1]);
@@ -67,6 +74,8 @@ public class Mission{
 				string medium = pair[0];
 				string act = pair[1];
 				int index = int.Parse(pair[2]);
+
+				Debug.Log (medium + " " + act + " " + index);
 
 				string dialogue = "";
 				if(medium == "tv"){
@@ -83,10 +92,6 @@ public class Mission{
 				string filename = item;
 				PlayerState.Instance.intel.Add(new Dossier(filename));
 			}
-
-
-
-
 
 			return true;
 		}

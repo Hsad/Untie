@@ -1,21 +1,30 @@
 {
-	"Acquire":{
-		"title":"buying weapons",
-		"prerequisites":[["money", 400]],
-		"requirements":["Domoy",1000,10],
-		"success":{
-			"violence":0,
-			"public_opinion":0,
-			"materials":[["guns", 5],["c4", 20]],
-			"dialogue":[["mission","part3",5],["mission","part3",6]],
-			"intel":["bribe_1","Track_1"]
-		},
-		"failure":{
-			"violence":0,
-			"public_opinion":0,
-			"materials":[],
-			"dialogue":[["mission","part3",7]],
-			"intel":["bribe_1"]
+	"type": "person",
+	"name": "Zevanoy Poshkinu",
+    "biotext": "UNKNOWN",
+    "details": "Background: A notorious crook and arms dealer.",
+	"photo": "mugshot3",
+
+	"missionlist":["acquire weapons"],
+	"missions":{
+		"acquire weapons":{
+			"title":"buying weapons",
+			"prerequisites":[["money", 400]],
+			"requirements":["Domoy",1000,10],
+			"success":{
+				"violence":0,
+				"public_opinion":0,
+				"materials":[["guns", 5],["c4", 20]],
+				"dialogue":[["mission","part3",5],["mission","part3",6]],
+				"intel":["bribe_1","Track_1"]
+			},
+			"failure":{
+				"violence":0,
+				"public_opinion":0,
+				"materials":[],
+				"dialogue":[["mission","part3",7]],
+				"intel":["bribe_1"]
+			}
 		}
 	}
 }

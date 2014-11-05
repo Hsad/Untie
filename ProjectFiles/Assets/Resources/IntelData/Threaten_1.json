@@ -1,21 +1,30 @@
 {
-	"Threaten":{
-		"title":"Bully rich kids",
-		"prerequisites":[["guns",1]],
-		"requirements":["Yeda",0001,20],
-		"success":{
-			"violence":-3,
-			"public_opinion":-1,
-			"materials":[["money",500] ],
-			"dialogue":[["tv","part3",0],["phone","part3",1]],
-			"intel":["Robbery_1","Bombing_1"]
-		},
-		"failure":{
-			"violence":-7,
-			"public_opinion":-3,
-			"materials":["guns",1],
-			"dialogue":[["tv","part3",2],["phone","part3",3]],
-			"intel":["Robbery_1"]
+	"type": "person",
+	"name": "Vladimir Petrokinelov",
+    "biotext": "Location: 577 Ulitsa street",
+    "details": "Background: A spawn of the oligarchy, beat him up to send a message.",
+	"photo": "objective1",
+
+	"missionlist":["threaten"],
+	"missions":{
+		"threaten":{
+			"title":"Bully rich kids",
+			"prerequisites":[["guns",1]],
+			"requirements":["Yeda",0001,20],
+			"success":{
+				"violence":-3,
+				"public_opinion":-1,
+				"materials":[["money",500] ],
+				"dialogue":[["tv","part3",0],["phone","part3",1]],
+				"intel":["Robbery_1","Bombing_1"]
+			},
+			"failure":{
+				"violence":-7,
+				"public_opinion":-3,
+				"materials":[["guns",1]],
+				"dialogue":[["tv","part3",2],["phone","part3",3]],
+				"intel":["Robbery_1"]
+			}
 		}
 	}
 }
