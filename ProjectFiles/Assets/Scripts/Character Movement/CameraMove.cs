@@ -9,10 +9,10 @@ public class CameraMove : MonoBehaviour
 
 		if(Input.GetKeyDown(KeyCode.E)){//begin or end interaction
 			if(CameraLook.isInteracting){
-				print("ending interaction");
+				//print("ending interaction");
 				CameraLook.isInteracting = false;
 			}else{
-				print("beginning interaction");
+				//print("beginning interaction");
 				CameraLook.isInteracting = true;
 			}
 		}
