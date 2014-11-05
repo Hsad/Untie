@@ -45,20 +45,24 @@ public class BulletinBoard : MonoBehaviour {
 			}
 		}
 
+		if(curmin == int.MaxValue) return;//if no missions, ignore
+
 		//get all comrades with the shortest time until mission and carry out their missions
 		foreach(IgnoreRaycast irc in temp[curmin]){
 			//execute the mission
+			PlayerState.Instance.set_time(irc.time);
 
-			if(irc.current_mission.run()){//if the mission ran
-				irc.current_mission = null;
-			}
+			//set comrade's new location to that of mission
+			irc.gameObject.transform.localPosition = irc.target.transform.localPosition;
+
+			IgnoreRaycast igrt = irc.target.GetComponent<IgnoreRaycast>();
+			irc.current_district = igrt.current_district;
 
 
-			print("Executing mission: " + irc.name);
+			//destroy mission object
+			igrt.current_district.nodes.Remove(irc.target);
+			Destroy(irc.target);
+			irc.current_mission = null;//set the current mission to null
 		}
-
-
-
-
 	}
 }

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class District : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler {
 	
-	public string name;
+	public string dname;
 	public List<GameObject> nodes;//collection of nodes in this particular district, nodes are any kind of photograph
 
 
@@ -23,7 +23,7 @@ public class District : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 		if(nodes == null){
 			nodes = new List<GameObject>();
 		}
-		name = gameObject.name;
+		dname = gameObject.name;
 	}
 
 	public void OnDrop(PointerEventData data){//do this when the dragged image is dropped

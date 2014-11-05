@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 508c6f3b7f3a3d04d9b4ab651d931e5b
+guid: 96f399a6e79d3bb4aa7909189e35fddb
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pPlane16_FullRoom
-    400000: //RootNode
-    400002: pPlane16_FullRoom
-    2300000: pPlane16_FullRoom
-    3300000: pPlane16_FullRoom
-    4300000: pPlane16_FullRoom
+    100000: pCube90
+    100002: Television
+    100004: //RootNode
+    400000: pCube90
+    400002: Television
+    400004: //RootNode
+    2300000: pCube90
+    3300000: pCube90
+    4300000: pCube90
     9500000: //RootNode
   materials:
     importMaterials: 1

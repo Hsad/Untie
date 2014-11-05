@@ -10,7 +10,7 @@ public class television : MonoBehaviour {
 	private List<string> clips = new List<string>();
 	private GameObject conversation;
 	// Use this for initialization
-	void Start () {
+	/*void Start () {
 		//adding clips
 		conversation = GameObject.Find("tv_canvas");
 
@@ -32,7 +32,7 @@ public class television : MonoBehaviour {
 		//story_book.Add("Ivan:sakjalkjsd");
 		clip_intel.text = clips[clip_number];
 		//conversation.SetActive(false);
-	}
+	}*/
 	
 	public void next_arc(){
 		//gets called when next story arc is needed

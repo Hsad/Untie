@@ -11,6 +11,6 @@ public class Notebook_script : MonoBehaviour {
 	}
 	
 	public void Update(){
-		anim.SetBool("moving",CameraLook.isInteracting);
+		anim.SetBool("showing",CameraLook.isInteracting);
 	}
 }
