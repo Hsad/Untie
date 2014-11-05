@@ -15,7 +15,7 @@
 			"public_opinion":2,
 			"materials":[],
 			"dialogue":[["mission","part1",2]],
-			"intel":[]
+			"intel":["propaganda_2"]
 		}
 	}
 }

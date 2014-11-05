@@ -6,48 +6,48 @@
 		"You: “The list is complete.”,
 		"Anton: “Good. I’ll send the targets to some men immediately.",
 		"Anton: Come on are you part of us or not stop messing up!",
-		"Anton: Good work on the raid we got a lot of supplies",
-		"You: For the revolution",
+		"Anton: Good work on the raid we got a lot of supplies, and by goodness that was just the amount of weapons we needed.",
+		"You: For the revolution, and the future.",
 		"Ivan: we lost a great many a person in that raid"
 	],
 	"part2":[	
-		"Anton: Good work now with cars we can go supply our men",
-		"you: Thank you",
+		"Anton: Good work now with cars we can go resupply our men and reach the front lines faster.",
+		"You: Thank you, it was my honor to aid the revolution in the best possible way. ",
 		"You: “I’ve compiled the sources. Expect them within the day.”,
 		"Ivan: Good. Before making an army, you must feed an army. Take care, comrade.”
 		"Ivan: If this is the extent of your abilities, I have overestimated you",
 		"You: Sorry sir this will never happen again",
-		"Ivan: Great work we now have a great power on our side",
-		"You: Thank you",
-		"Ivan: That much money and he still didn't join that greedy pig",
-		"Ivan: Thanks you got some good intel",
+		"Ivan: Great work we now have a great power on our side. Alas it shows us how greedy and foolish this government is to be so easily bribed.",
+		"You: Thank you, it wasn't much the man was always a greedy little guy.",
+		"Ivan: That much money and he still didn't join that greedy pig, and I thought we had enough money to get him on our side.",
+		"Ivan: Thanks you, we got some good intel, Let's hope this can help us and protect the civilians.",
 		"Ivan: No Intel? This makes it harder",
 		"Ivan: Good work on the raid",
 		"Anton: We lost too many and gained too few"
 	],
 	"part3":[
-		"Ivan: great job hustling that money my boy",
-		"You: it was nothing",
-		"Ivan: can't even hustle a couple of boys you've been slacking",
+		"Ivan: great job hustling that money my boy, We neded some funds to help initiate our movement.",
+		"You: it was nothing, for the glory of the revolution we can always pay them back later.",
+		"Ivan: can't even hustle a couple of boys you've been slacking, we need funds don't forget that money is needed to fund an operation.",
 		"You: It will ever happen again.",
-		"Anton: That was a tremendous success great work!!",
-		"You: If only there weren't any civilians nearby",
-		"Anton: you FOOL not only did you mess up but you harmed the civilians",
-		"You: there was never enough intel to do it!!",
-		"Ivan: good job trakcing him we got good intel",
-		"You: It is my honor",
-		"Ivan: Guy's pretty smart to lose you so fast"
+		"Anton: That was a tremendous success great work!! Now the government knows we mean buisness. We must take the intitative while we still have it.",
+		"You: If only there weren't any civilians nearby. Is it really worth it Anton? The amount of people that have been hurt, are we really doing the right thing?",
+		"Anton: YOU FOOL not only did you mess up but you harmed the civilians, our great noble cause is in danger now because of you.",
+		"You: I TOLD you there wasn't enough intel. You were the one who wanted to continue, and I ask you again Anton is it really worth the sacrifices.",
+		"Ivan: good job tracking him we got good intel, now with all this intel we can have even less civilian casualties.",
+		"You: One can only hope that the intel can lessen the burden placed amongst out brethen.",
+		"Ivan: Guy's pretty smart to lose you so fast, but regardless we must go through the plan even with the little amount of intel we've gathered."
 	],
 	"part4":[
-		"Anton: Thank you and remember it was for a good cause",
-		"You: Robbing from the people is never a good idea",
+		"Anton: Thank you and remember it was for a good cause, a revolution without money is a revolution bound to fair it pains me too.",
+		"You: Robbing from the people is never a good idea, surely there must bee another way to gain money instead of robbing the people's money.",
 		"Anton: Guess'll we'll hit another hopefully easier target.",
-		"Anton: this is great even the people are on our side",
-		"You: it was bound to happen",
-		"Anton: how do we mess up a protest?"
-		"Anton: Great work we needed the weapons",
-		"You: it was only my duty",
-		"Ivan: Dang it a failed transaction"
+		"Anton: This is great even the people are on our side. The protest was an excellent choice of action we have gained much support amongst our country man.",
+		"You: it was bound to happen, sooner or later they will see that we are indeed on the path of justice.",
+		"Anton: how do we mess up a protest? We have to make them see that justice is on out side."
+		"Anton: Great work on getting the weapons. As we all know the higher rank never think of the poorer people unless their lives are threaten by force.",
+		"You: it was only my duty, for we require the might to fight against this military to hope that we can win.",
+		"Ivan: Dang it a failed transaction. These people are driving the bargain for weapons way too high."
 	]
 	
 	

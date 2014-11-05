@@ -8,7 +8,7 @@
 			"public_opinion":3,
 			"materials":[],
 			"dialogue":[["mission","part2",2],["mission","part2",3]],
-			"intel":["propaganda_2"]
+			"intel":["bribe_1","destroy_1"]
 		},
 		"failure":{
 			"violence":0,
